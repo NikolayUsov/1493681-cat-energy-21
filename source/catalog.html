@@ -12,7 +12,7 @@
     <div class="wrapper">
       <nav class="main-nav header__nav">
         <a href="index.html" class="main-nav__logo"></a>
-        <button class="main-nav__toogle main-nav__toggle--close" aria-label="Переключить модальное окно"></button>
+        <button class="main-nav__toggle main-nav__toggle--close" aria-label="Переключить модальное окно"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="index.html" class="main-nav__link">главная</a>
@@ -35,17 +35,23 @@
           <div class="product-card__picture">
             <img src="https://via.placeholder.com/280x270" width="140" height="112" alt="Упаковка корма для котов">
           </div>
-          <div class="product-card__text-content">
+          <div class="product-card__content">
             <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
             <div class="product-card__properties">
-              <dl class="specification">
-                <dt class="specification__title">Масса</dt>
-                <dd class="specification__value">500 г</dd>
-                <dt class="specification__title">Вкус</dt>
-                <dd class="specification__value">Курица</dd>
-                <dt class="specification__title">Цена</dt>
-                <dd class="specification__value">700р</dd>
-              </dl>
+              <ul class="product-card__specification specification">
+                <li class="specification__item">
+                  <span class="specification__title">Масса</span>
+                  <span class="specification__value">500 г</span>
+                </li>
+                <li class="specification__item">
+                  <span class="specification__title">Вкус</span>
+                  <span class="specification__value">Курица</span>
+                </li>
+                <li class="specification__item">
+                  <span class="specification__title">Цена<spant>
+                  <span class="specification__value">700р</span>
+                </li>>
+              </ul>
             </div>
           </div>
           <a href="#" class="button product-card__button">заказать</a>
@@ -108,7 +114,7 @@
   </main>
   <footer class="footer">
     <section class="footer__contacts contacts">
-      <p class="contacs__welcome">приглашаем к сотрудничеству дилеров!</p>
+      <p class="contacts__welcome">приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
     </section>
     <section class="footer__map map"></section>
