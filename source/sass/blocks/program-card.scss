@@ -1,0 +1,9 @@
+@import "variables";
+$program-card-color:#F2F2F2;
+
+.program-card{
+  width: 100%;
+  min-height: 280px;
+  padding: 40px 20px 25px;
+  background-color: $program-card-color;
+}

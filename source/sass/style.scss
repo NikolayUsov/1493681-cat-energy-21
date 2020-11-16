@@ -1,1 +1,11 @@
 // Начните писать стили здесь
+@import "font-face";
+@import "global";
+@import "variables";
+@import "blocks/visually-hidden.scss";
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/program-card.scss";
+@import "blocks/promo.scss";
+@import "blocks/programs.scss"
