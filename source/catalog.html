@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -11,104 +11,106 @@
   <header class="header">
     <div class="wrapper">
       <nav class="main-nav header__nav">
-        <a href="index.html" class="main-nav__logo"></a>
-        <button class="main-nav__toggle main-nav__toggle--close" aria-label="Переключить модальное окно"></button>
+        <a class="main-nav__logo logo"><img src="https://via.placeholder.com/190x33" width="190" height="33" alt="Логотип"></a>
+        <button type="button" class="main-nav__toggle main-nav__toggle--close" aria-label="Переключить модальное окно"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link">главная</a>
+            <a href="#" class="main-nav__link main-nav__link--active-link">главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link main-nav__link--active-link">каталог продукции</a>
+            <a href="catalog.html" class="main-nav__link">каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html" class="main-nav__link">подбор программы</a>
+            <a href="form.html" class="main-nav__link">подбор программы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
   <main class="main">
-    <h1 class="main__titile">Каталог продукции</h1>
     <section class="main-catalog">
-      <ul class="main-catalog__list">
-        <li class="main-catalog__item product-card">
-          <div class="product-card__picture">
-            <img src="https://via.placeholder.com/280x270" width="140" height="112" alt="Упаковка корма для котов">
-          </div>
-          <div class="product-card__content">
-            <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
-            <div class="product-card__properties">
-              <ul class="product-card__specification specification">
-                <li class="specification__item">
-                  <span class="specification__title">Масса</span>
-                  <span class="specification__value">500 г</span>
-                </li>
-                <li class="specification__item">
-                  <span class="specification__title">Вкус</span>
-                  <span class="specification__value">Курица</span>
-                </li>
-                <li class="specification__item">
-                  <span class="specification__title">Цена<spant>
-                  <span class="specification__value">700р</span>
-                </li>>
-              </ul>
+      <div class="wrapper">
+        <h1 class="main-catalog__title custom-text custom-text--biggest">Каталог продукции</h1>
+        <ul class="main-catalog__list">
+          <li class="main-catalog__item product-card">
+            <div class="product-card__picture">
+              <img src="https://via.placeholder.com/140x112" width="140" height="112" alt="Упаковка корма для котов">
             </div>
-          </div>
-          <a href="#" class="button product-card__button">заказать</a>
-        </li>
-        <li class="main-catalog__item product-card product-card--show-more">
-          <div class="product-card__picture">
-            <img src="https://via.placeholder.com/280x270" width="30" height="30" alt="Икона знака плюс">
-          </div>
-          <div class="product-card__text-content">
-            <h3 class="product-card__title">Показать еще 100500 товаров</h3>
-            <p class="product-card__info">На самом деле вкусов гораздо больше!</p>
-          </div>
-          <a href="#" class="product-card__button product-card__button--show-more button">показать все</a>
-        </li>
-      </ul>
+            <div class="product-card__content">
+              <h3 class="product-card__title custom-text">Cat Energy PRO 500 г</h3>
+                <ul class="product-card__specification specification">
+                  <li class="specification__item">
+                    <span class="specification__title">Масса</span>
+                    <span class="specification__value">500 г</span>
+                  </li>
+                  <li class="specification__item">
+                    <span class="specification__title">Вкус</span>
+                    <span class="specification__value">Курица</span>
+                  </li>
+                  <li class="specification__item">
+                    <span class="specification__title">Цена<spant>
+                    <span class="specification__value">700р</span>
+                  </li>
+                </ul>
+            </div>
+            <a href="#" class="button button--long product-card__button">заказать</a>
+          </li>
+          <li class="main-catalog__item product-card product-card--show-more">
+            <div class="product-card__picture">
+              <img src="https://via.placeholder.com/280x270" width="30" height="30" alt="Икона знака плюс">
+            </div>
+            <div class="product-card__text-content">
+              <h3 class="product-card__title">Показать еще 100500 товаров</h3>
+              <p class="product-card__info">На самом деле вкусов гораздо больше!</p>
+            </div>
+            <a href="#" class="product-card__button product-card__button--show-more button button--long">показать все</a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="secondary-catalog">
-      <h2 class="secondary-catalog__title">Дополнительные товары</h2>
-      <ul class="secondary-catalog__list">
-        <li class="secondary-catalog__item secondary-product-card">
-          <h3 class="secondary-product-card__title">Сахарозаменитель</h3>
-          <P class="secondary-product-card__info">
-            <span class="secondary-product-card__value">1 упаковка (100 г)</span>
-            <span class="secondary-product-card__price">200 Р.</span>
-          </p>
-          <a class="secondary-product-card__button button">Заказать</a>
-        </li>
-        <li class="secondary-catalog__item secondary-product-card">
-          <h3 class="secondary-product-card__title">питьевая вода</h3>
-          <P class="secondary-product-card__info">
-            <span class="secondary-product-card__value">5 литров</span>
-            <span class="secondary-product-card__price">50 Р.</span>
-          </p>
-          <a class="secondary-product-card__button button">Заказать</a>
-        </li>
-        <li class="secondary-catalog__item secondary-product-card">
-          <h3 class="secondary-product-card__title">молоко</h3>
-          <P class="secondary-product-card__info">
-            <span class="secondary-product-card__value">1 литр</span>
-            <span class="secondary-product-card__price">100 Р.</span>
-          </p>
-          <a class="secondary-product-card__button button">Заказать</a>
-        </li>
-        <li class="secondary-catalog__item secondary-product-card">
-          <h3 class="secondary-product-card__title">витамины</h3>
-          <P class="secondary-product-card__info">
-            <span class="secondary-product-card__value">1 упаковка (30 г)</span>
-            <span class="secondary-product-card__price">300 Р.</span>
-          </p>
-          <a class="secondary-product-card__button button">Заказать</a>
-        </li>
-      </ul>
-      <div class="secondary-catalog__gift gift">
-        <div class="gift__img">
-          <img src="https://via.placeholder.com/280x270" width="78" height="80" alt="Промо-иконка с подарком">
+      <div class="wrapper">
+        <h2 class="secondary-catalog__title">Дополнительные товары</h2>
+        <ul class="secondary-catalog__list">
+          <li class="secondary-catalog__item secondary-product-card">
+            <h3 class="secondary-product-card__title">Сахарозаменитель</h3>
+            <P class="secondary-product-card__info">
+              <span class="secondary-product-card__value">1 упаковка (100 г)</span>
+              <span class="secondary-product-card__price">200 Р.</span>
+            </p>
+            <a class="secondary-product-card__button button">Заказать</a>
+          </li>
+          <li class="secondary-catalog__item secondary-product-card">
+            <h3 class="secondary-product-card__title">питьевая вода</h3>
+            <P class="secondary-product-card__info">
+              <span class="secondary-product-card__value">5 литров</span>
+              <span class="secondary-product-card__price">50 Р.</span>
+            </p>
+            <a class="secondary-product-card__button button">Заказать</a>
+          </li>
+          <li class="secondary-catalog__item secondary-product-card">
+            <h3 class="secondary-product-card__title">молоко</h3>
+            <P class="secondary-product-card__info">
+              <span class="secondary-product-card__value">1 литр</span>
+              <span class="secondary-product-card__price">100 Р.</span>
+            </p>
+            <a class="secondary-product-card__button button">Заказать</a>
+          </li>
+          <li class="secondary-catalog__item secondary-product-card">
+            <h3 class="secondary-product-card__title">витамины</h3>
+            <P class="secondary-product-card__info">
+              <span class="secondary-product-card__value">1 упаковка (30 г)</span>
+              <span class="secondary-product-card__price">300 Р.</span>
+            </p>
+            <a class="secondary-product-card__button button">Заказать</a>
+          </li>
+        </ul>
+        <div class="secondary-catalog__gift gift">
+          <div class="gift__img">
+            <img src="https://via.placeholder.com/280x270" width="78" height="80" alt="Промо-иконка с подарком">
+          </div>
+          <p class="gift__rule">Закажите все и получите чехол для кота в подарок!</p>
         </div>
-        <p class="gift__rule">Закажите все и получите чехол для кота в подарок!</p>
       </div>
     </section>
   </main>

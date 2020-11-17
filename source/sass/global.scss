@@ -26,8 +26,7 @@
 a:not([href^="http://"]):not([href^="https://"])
 {
   text-decoration: none;
-  font: inherit;
-  color: inherit;
+
 }
 
 img {

@@ -1,4 +1,4 @@
-@import "variables";
+
 $program-card-color:#F2F2F2;
 
 .program-card{
@@ -6,4 +6,18 @@ $program-card-color:#F2F2F2;
   min-height: 280px;
   padding: 40px 20px 25px;
   background-color: $program-card-color;
+  &__title{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 29px;
+  }
+  &__description{
+    margin-bottom: 23px;
+  }
+  &__link{
+    display: inline-block;
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px solid $border-link-color;
+  }
 }

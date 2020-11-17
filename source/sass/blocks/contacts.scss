@@ -1,0 +1,11 @@
+.contacts{
+  display: flex;
+  &__welcome{
+    flex-basis: 50%;
+    margin: 0;
+  }
+  &__address{
+    flex-basis: 50%;
+    margin: 0;
+  }
+}

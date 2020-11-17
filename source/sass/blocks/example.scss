@@ -1,0 +1,20 @@
+.example{
+  background-color: $example-bg-color;
+  padding: 27px 0px 25px;
+  &__titile{
+    margin:0;
+    margin-bottom: 33px;
+  }
+  &__description{
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  &__stats{
+    margin: 0;
+    margin-bottom: 26px;
+  }
+  &__total-price{
+    margin: 0;
+    margin-bottom: 42px;
+  }
+}

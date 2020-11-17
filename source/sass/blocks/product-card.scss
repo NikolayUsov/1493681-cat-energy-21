@@ -1,0 +1,19 @@
+.product-card__title{
+  margin:0;
+  margin-bottom: 18px;
+}
+.product-card__picture{
+  width: 140px;
+  height: 112px;
+}
+.product-card__specification{
+  @include main-list();
+}
+.product-card__button{
+  font-size: 18px;
+}
+
+.product-card__button--show-more{
+  background-color: $footer-bg-color;
+  color: $main-font-color;
+}

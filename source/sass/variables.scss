@@ -1,6 +1,14 @@
 //переменные
 $main-font-color: #444444;
-
+$basic-green: #68B738;
+$white: #ffffff;
+$black: #000000;
+$example-bg-color:#EAEAEA;
+$footer-bg-color: #F2F2F2;
+$border-link-color:#D9D9D9;
+$basic-gray: $footer-bg-color;
+// переменные фона
+$custom-font:"Oswald", Arial,sans-serif;
 //МИКСИНЫ
 @mixin main-list {
   list-style: none;

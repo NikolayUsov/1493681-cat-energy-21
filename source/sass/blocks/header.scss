@@ -1,6 +1,4 @@
-.main-nav__list{
-  @include main-list;
-}
+
 .main-nav__item{
-  font-family: "Oswald";
+  font-family: $custom-font;
 }
