@@ -1,0 +1,42 @@
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form__legend {
+  font-family: $custom-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: $black;
+  margin-bottom: 32px;
+}
+
+.form__group {
+  @include main-list();
+  margin-bottom: 22px;
+}
+
+.form__option {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__textarea-label {
+  font-family: $custom-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-color;
+  text-transform: uppercase;
+}
+
+.form__button {
+  border: none;
+}

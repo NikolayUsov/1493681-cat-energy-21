@@ -1,0 +1,4 @@
+.text-field__label {
+  @include form-label();
+  color: $text-color;
+}
