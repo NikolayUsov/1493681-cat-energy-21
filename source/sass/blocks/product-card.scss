@@ -1,19 +1,26 @@
-.product-card__title{
-  margin:0;
+.product-card__title {
+  margin: 0;
   margin-bottom: 18px;
 }
-.product-card__picture{
+
+.product-card__picture {
   width: 140px;
   height: 112px;
 }
-.product-card__specification{
+
+.product-card__specification {
   @include main-list();
 }
-.product-card__button{
-  font-size: 18px;
+
+.product-card__button--show-more {
+  background-color: $gray-100;
+  color: $text-color;
+  font-size: 16px;
 }
 
-.product-card__button--show-more{
-  background-color: $footer-bg-color;
-  color: $main-font-color;
+.product-card__info {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 16px;
 }

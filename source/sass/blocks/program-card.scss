@@ -1,23 +1,24 @@
 
-$program-card-color:#F2F2F2;
-
-.program-card{
+.program-card {
   width: 100%;
   min-height: 280px;
   padding: 40px 20px 25px;
-  background-color: $program-card-color;
-  &__title{
-    margin: 0;
-    padding: 0;
-    margin-bottom: 29px;
-  }
-  &__description{
-    margin-bottom: 23px;
-  }
-  &__link{
-    display: inline-block;
-    width: 100%;
-    padding-top: 15px;
-    border-top: 1px solid $border-link-color;
-  }
+  background-color: $gray-100;
+}
+
+.program-card__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 29px;
+}
+
+.program-card__description {
+  margin-bottom: 23px;
+}
+
+.program-card__link {
+  display: inline-block;
+  width: 100%;
+  padding-top: 15px;
+  border-top: 1px solid $border-link-color;
 }

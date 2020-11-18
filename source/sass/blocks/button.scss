@@ -1,14 +1,16 @@
-.button{
+.button {
   display: inline-flex;
-  padding: 18px 26px;
+  padding: 8px 26px;
   background-color: rgba($basic-green, 0.85);
   font-family: $custom-font;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
   color: $white;
   justify-content: center;
   align-items: center;
-  &--long{
+
+  &--long {
     width: 100%;
-}
+  }
 }

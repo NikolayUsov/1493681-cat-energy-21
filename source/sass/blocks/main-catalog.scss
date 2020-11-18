@@ -1,11 +1,17 @@
-.main-catalog{
+.main-catalog {
   padding: 0;
   padding-top: 27px;
-  &__title{
-    margin: 0;
-    margin-bottom: 49px;
-  }
-  &__list{
-    @include main-list();
-  }
+}
+
+.main-catalog__title {
+  margin: 0;
+  margin-bottom: 39px;
+}
+
+.main-catalog__list {
+  @include main-list();
+}
+
+.main-catalog__item {
+  margin-bottom: 24px;
 }

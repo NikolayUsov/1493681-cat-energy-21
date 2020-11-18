@@ -1,20 +1,24 @@
-.example{
+.example {
   background-color: $example-bg-color;
-  padding: 27px 0px 25px;
-  &__titile{
-    margin:0;
-    margin-bottom: 33px;
-  }
-  &__description{
-    margin: 0;
-    margin-bottom: 25px;
-  }
-  &__stats{
-    margin: 0;
-    margin-bottom: 26px;
-  }
-  &__total-price{
-    margin: 0;
-    margin-bottom: 42px;
-  }
+  padding: 27px 0 25px;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.example__stats {
+  margin: 0;
+  margin-bottom: 26px;
+}
+
+.example__total-price {
+  margin: 0;
+  margin-bottom: 42px;
 }

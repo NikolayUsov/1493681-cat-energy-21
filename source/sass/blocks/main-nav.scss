@@ -1,4 +1,8 @@
-.main-nav__list{
+.main-nav__item {
+  font-family: $custom-font;
+}
+
+.main-nav__list {
   @include main-list;
   display: none;
 }

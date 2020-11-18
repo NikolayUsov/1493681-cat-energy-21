@@ -1,16 +1,18 @@
-.footer{
+.footer {
   padding-top: 28px;
 }
-.footer__contacts{
+
+.footer__contacts {
   margin-bottom: 22px;
 }
-.footer__map{
+
+.footer__map {
   min-height: 362px;
   background-image: url("../../img/map.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.footer__links{
+.footer__links {
   background-color: $footer-bg-color;
 }
