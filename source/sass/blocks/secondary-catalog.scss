@@ -1,0 +1,16 @@
+.secondary-catalog {
+  padding-top: 28px;
+}
+
+.secondary-catalog__title {
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.secondary-catalog__list {
+  @include main-list();
+}
+
+.secondary-catalog__item {
+  margin-bottom: 19px;
+}

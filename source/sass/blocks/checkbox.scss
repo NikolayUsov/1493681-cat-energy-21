@@ -1,0 +1,4 @@
+.checkbox__label {
+  @include form-label();
+  color: $black;
+}

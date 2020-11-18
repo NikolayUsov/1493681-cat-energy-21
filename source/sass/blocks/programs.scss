@@ -1,0 +1,16 @@
+.programs {
+  padding-top: 22px;
+  padding-bottom: 28px;
+}
+
+.programs__list {
+  @include main-list();
+}
+
+.programs__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,15 @@
+.footer-links {
+  padding: 39px 0 22px;
+}
+
+.footer-links__logo {
+  display: inline-block;
+  width: 128px;
+  height: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $border-link-color;
+}
+
+.footer-links__social-list {
+  @include main-list();
+}

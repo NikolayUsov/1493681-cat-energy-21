@@ -1,0 +1,15 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a:not([href^="http://"]):not([href^="https://"]) {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
