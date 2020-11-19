@@ -3,6 +3,6 @@
 }
 
 .main-nav__list {
-  @include main-list;
+  @include reset-list;
   display: none;
 }

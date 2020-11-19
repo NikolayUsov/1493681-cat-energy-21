@@ -9,7 +9,7 @@
 }
 
 .product-card__specification {
-  @include main-list();
+  @include reset-list();
 }
 
 .product-card__button--show-more {
