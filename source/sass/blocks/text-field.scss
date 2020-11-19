@@ -16,8 +16,13 @@ $border-color:$light-gray;
   padding: 12px 13px;
 
   @include form-label();
+
   color: $text-color;
-  text-transform: uppercase;
   border: 1px solid $border-color;
   flex-grow: 1;
+
+  @include input-placeholder {
+    @include form-label();
+    color: $text-color;
+  }
 }
