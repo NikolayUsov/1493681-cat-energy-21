@@ -30,7 +30,7 @@
   <main class="main">
     <div class="wrapper">
       <h1 class="main__title text text--biggest">Подбор программы</h1>
-      <p class="main_description text text--small text--uppercase"> Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="main__description text text--small text--uppercase"> Заполните анкету, и мы подберем программу питания для вашего кота</p>
     </div>
     <form class="main__form form" method="post" action="https://echo.htmlacademy.ru">
       <div class="wrapper">
@@ -92,9 +92,10 @@
         <fieldset class="form__fieldset">
           <legend class="form__legend">Комментарий</legend>
           <div class="form__group form__option">
-              <label class="form__textarea-label" for="comment">Расскажите обо всех повадках кота</label>
+            <label for="comment">
               <textarea id="comment" class="form__textarea"
-                  name="comment"></textarea>
+              name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
           </div>
         </fieldset>
       </div>

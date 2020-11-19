@@ -1,0 +1,19 @@
+.main {
+  padding-top: 27px;
+  padding-bottom: 32px;
+
+  &--no-top-padding {
+    padding-top: 0;
+  }
+}
+
+.main__title {
+  margin: 0;
+  margin-bottom: 37px;
+}
+
+.main__description {
+  margin: 0;
+  margin-bottom: 39px;
+  line-height: 18px;
+}

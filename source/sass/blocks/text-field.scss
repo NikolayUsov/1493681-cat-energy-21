@@ -1,4 +1,23 @@
+$border-color:$light-gray;
+
+.text-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .text-field__label {
   @include form-label();
   color: $text-color;
+  margin-right: 12px;
+}
+
+.text-field__input {
+  padding: 12px 13px;
+
+  @include form-label();
+  color: $text-color;
+  text-transform: uppercase;
+  border: 1px solid $border-color;
+  flex-grow: 1;
 }

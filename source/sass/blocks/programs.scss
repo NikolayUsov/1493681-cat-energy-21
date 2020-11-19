@@ -4,7 +4,7 @@
 }
 
 .programs__list {
-  @include main-list();
+  @include reset-list();
 }
 
 .programs__item {
