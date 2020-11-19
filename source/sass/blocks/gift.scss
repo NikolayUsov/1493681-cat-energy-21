@@ -1,3 +1,18 @@
+.gift {
+  width: 100%;
+  height: 280px;
+  background-color: $basic-green;
+  background-image: url("../img/gift-photo-mobile-bg1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 186px 61px 43px;
+}
+
 .gift__rule {
+  color: $white;
   margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
 }

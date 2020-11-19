@@ -41,6 +41,11 @@ $border-color:$light-gray;
   min-height: 150px;
   padding: 15px 13px;
   border: 1px solid $border-color;
+
+  @include input-placeholder {
+    @include form-label();
+    color: $text-color;
+  }
 }
 
 .form__button {
