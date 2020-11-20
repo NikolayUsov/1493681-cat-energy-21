@@ -34,3 +34,15 @@
     @content;
   }
 }
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin pseudo($width,$height) {
+  position: absolute;
+  content: "";
+  width: $width;
+  height: $height;
+}

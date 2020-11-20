@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,17 +12,22 @@
   <header class="header">
     <div class="wrapper">
       <nav class="main-nav header__nav">
-        <a class="main-nav__logo logo"><img src="https://via.placeholder.com/190x33" width="190" height="33" alt="Логотип"></a>
-        <button type="button" class="main-nav__toggle main-nav__toggle--close" aria-label="Переключить модальное окно"></button>
-        <ul class="main-nav__list">
+        <div class="main-nav__inner">
+          <a class="main-nav__logo logo">
+            <img src="/img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+          </a>
+          <a class="main-nav__text-logo"><img src="/img/text-logo.svg" width="101" height="18" alt="catenergy"></a>
+          <button type="button" class="main-nav__toggle burger burger__button" aria-label="Показать  меню"></button>
+        </div>
+        <ul class="main-nav__list burger__menu">
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link main-nav__link--active-link">главная</a>
+            <a href="#" class="main-nav__link main-nav__link--active-link text text--uppercase">главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html" class="main-nav__link">каталог продукции</a>
+            <a href="catalog.html" class="main-nav__link text text--uppercase">каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">подбор программы</a>
+            <a href="form.html" class="main-nav__link text text--uppercase">подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -32,17 +38,16 @@
     <section class="promo">
       <div class="wrapper">
         <p class="promo__describe text text--biggest">Функциональное питание для котов</p>
-        <p class="promo__tagline text text--small">Занялся собой? Займись котом!</p>
+        <p class="promo__tagline text text--small text--uppercase">Занялся собой? Займись котом!</p>
         <div class="promo__picture">
-          <img src="https://via.placeholder.com/280x270" width="280" height="270"alt="Картинка комплексного питания для котов">
+
         </div>
-        <a class="button button--full-width promo__button">подобрать программу</a>
+        <a class="button  promo__button">подобрать программу</a>
       </div>
       </section>
       <section class="programs">
         <div class="wrapper">
           <h2 class="visually-hidden">Варианты программ питания</h2>
-          <div class="wrapper">
             <ul class="programs__list">
               <li class="programs__item program-card">
                 <h3 class="program-card__title text text--big text--uppercase">похудение</h3>
@@ -57,7 +62,6 @@
                 <a href="catalog.html" class="program-card__link text text--uppercase">каталог pro</a>
               </li>
             </ul>
-          </div>
         </div>
     </section>
     <section class="program-steps">
@@ -148,6 +152,7 @@
         </div>
       </section>
   </footer>
+  <script src="js/burger.js"></script>
 </body>
 
 </html>

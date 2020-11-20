@@ -5,6 +5,12 @@
 
 .programs__list {
   @include reset-list();
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
@@ -12,5 +18,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 570px;
+    flex-grow: 1;
   }
 }
