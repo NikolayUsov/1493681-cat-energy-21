@@ -6,3 +6,56 @@
   margin: 0;
   margin-bottom: 38px;
 }
+
+.program-steps__list {
+  @include reset-list();
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(243px, 1fr));
+    column-gap: 60px;
+    row-gap: 90px;
+  }
+
+  counter-reset: mycount;
+}
+
+.program-steps__item {
+  min-height: 60px;
+  margin-bottom: 26px;
+  position: relative;
+  padding-left: 83px;
+
+  @media (min-width: $tablet) {
+    max-width: 238px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 111px;
+  }
+
+  &::before {
+    @include pseudo (60px, 60px);
+    top: 0;
+    left: 0;
+    background-color: $basic-green;
+
+    @media (min-width: $tablet) {
+      @include pseudo (80px, 80px);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      position: absolute;
+      counter-increment: mycount;
+      content: counter(mycount);
+      font-family: $custom-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $gray-100;
+      top: -74px;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
