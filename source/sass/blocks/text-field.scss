@@ -10,6 +10,11 @@ $border-color:$light-gray;
   @include form-label();
   color: $text-color;
   margin-right: 12px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .text-field__input {

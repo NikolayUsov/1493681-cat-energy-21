@@ -16,4 +16,15 @@
   margin: 0;
   margin-bottom: 39px;
   line-height: 18px;
+
+  @media (min-width: $tablet) {
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 363px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 0;
+  }
 }

@@ -1,9 +1,32 @@
-$border-color:$light-gray;
+$border-color: $light-gray;
+
+.form {
+  @media (min-width: $tablet) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
 
 .form__fieldset {
   padding: 0;
   margin: 0;
   border: none;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 55px;
+  }
+}
+
+.form__fieldset--radio-group {
+  @media (min-width: $tablet) {
+    border: 1px solid #e7e7e7;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }
 
 .form__legend {
@@ -14,11 +37,30 @@ $border-color:$light-gray;
   line-height: 26px;
   color: $black;
   margin-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+  }
+}
+
+.form__legend--checkbox {
+  @media (min-width: $tablet) {
+    margin-bottom: 55px;
+  }
 }
 
 .form__group {
   @include reset-list();
-  margin-bottom: 22px;
+}
+
+.form__group--checkboxes {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(221px, 1fr));
+    column-gap: 60px;
+  }
 }
 
 .form__option {
@@ -49,5 +91,14 @@ $border-color:$light-gray;
 }
 
 .form__button {
+  min-width: 100%;
   border: none;
+
+  @media (min-width: $tablet) {
+    min-width: 282px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 568px;
+  }
 }
