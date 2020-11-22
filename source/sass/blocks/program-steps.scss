@@ -21,31 +21,37 @@
 }
 
 .program-steps__item {
-  min-height: 60px;
   margin-bottom: 26px;
+  display: flex;
   position: relative;
-  padding-left: 83px;
 
   @media (min-width: $tablet) {
     max-width: 238px;
     margin-bottom: 0;
     padding-left: 0;
-    padding-top: 111px;
+    flex-direction: column;
   }
 
   &::before {
-    @include pseudo (60px, 60px);
-    top: 0;
-    left: 0;
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    margin-right: 20px;
+
+    @include square(60px);
     background-color: $basic-green;
 
     @media (min-width: $tablet) {
-      @include pseudo (80px, 80px);
+      display: block;
+      margin-bottom: 31px;
+      margin-right: 0;
+
+      @include square(80px);
     }
   }
 
-  @media (min-width: $tablet) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet) {
       position: absolute;
       counter-increment: mycount;
       content: counter(mycount);
@@ -53,7 +59,7 @@
       font-size: 280px;
       line-height: 280px;
       color: $gray-100;
-      top: -74px;
+      top: -47px;
       right: 0;
       z-index: -1;
     }

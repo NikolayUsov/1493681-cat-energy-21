@@ -24,6 +24,14 @@
   align-items: center;
   border: none;
   margin: 0;
+  position: relative;
+
+  &::after {
+    @include pseudo(100vw, 1px);
+    top: 0;
+    right: -20px;
+    background-color: $gray-300;
+  }
 
   @media (min-width: $tablet) {
     padding: 0;
@@ -78,4 +86,3 @@
     display: block;
   }
 }
-

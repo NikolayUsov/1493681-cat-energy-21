@@ -1,0 +1,22 @@
+
+.photo-switcher__before,
+.photo-switcher__after {
+  display: none;
+  width: 100%;
+  min-height: 232px;
+  justify-content: center;
+}
+
+.photo-switcher__before.photo-switcher__active,
+.photo-switcher__after.photo-switcher__active {
+  display: flex;
+}
+
+.photo-switcher__photo img {
+  display: block;
+  object-fit: none;
+}
+
+.photo-switcher__control {
+  padding: 0 25px;
+}
