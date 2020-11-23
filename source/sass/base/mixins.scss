@@ -17,20 +17,16 @@
   &.placeholder {
     @content;
   }
+}
 
-  &:-moz-placeholder {
-    @content;
-  }
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
 
-  &::-moz-placeholder {
-    @content;
-  }
-
-  &:-ms-input-placeholder {
-    @content;
-  }
-
-  &::-webkit-input-placeholder {
-    @content;
-  }
+@mixin pseudo($width,$height) {
+  position: absolute;
+  content: "";
+  width: $width;
+  height: $height;
 }

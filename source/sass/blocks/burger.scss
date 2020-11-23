@@ -1,0 +1,16 @@
+.burger__button {
+  @include square(18px);
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.burger__menu {
+  display: none;
+}
+
+.burger__menu--show {
+  display: block;
+}

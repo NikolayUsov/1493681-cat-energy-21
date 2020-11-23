@@ -3,6 +3,12 @@
   padding: 27px 0 25px;
 }
 
+.example__wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
 .example__title {
   margin: 0;
   margin-bottom: 33px;
@@ -11,14 +17,65 @@
 .example__description {
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: $desktop) {
+    max-width: 436px;
+  }
 }
 
-.example__stats {
+.example__inner-stats {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.example__stats-list {
+  @include reset-list();
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 366px;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.example__stats-item {
   margin: 0;
   margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 55px;
+  }
 }
 
-.example__total-price {
+.example__stats-price {
   margin: 0;
   margin-bottom: 42px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 327px;
+  }
 }

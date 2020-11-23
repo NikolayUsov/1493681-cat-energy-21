@@ -4,16 +4,60 @@
   min-height: 280px;
   padding: 40px 20px 25px;
   background-color: $gray-100;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding: 77px 0 53px 52px;
+  }
+
+  &::before {
+    @include pseudo(50px,50px);
+    top: 30px;
+    left: 20px;
+    background-color: $basic-green;
+    border-radius: 50%;
+
+    @media (min-width: $tablet) {
+      @include pseudo (200px, 200px);
+      left: 443px;
+      top: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      @include pseudo(50px,50px);
+      top: 30px;
+      left: 20px;
+    }
+  }
 }
 
 .program-card__title {
   margin: 0;
   padding: 0;
   margin-bottom: 29px;
+  padding-left: 65px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 162px;
+  }
 }
 
 .program-card__description {
+  margin: 0;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 46px;
+    max-width: 377px;
+  }
 }
 
 .program-card__link {

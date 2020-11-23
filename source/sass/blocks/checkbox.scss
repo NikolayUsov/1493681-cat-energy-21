@@ -1,4 +1,9 @@
 .checkbox__label {
   @include form-label();
   color: $black;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
