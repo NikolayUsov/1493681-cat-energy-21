@@ -1,4 +1,11 @@
+.specification {
+  @include reset-list();
+}
+
 .specification__item {
   font-size: 12px;
   line-height: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

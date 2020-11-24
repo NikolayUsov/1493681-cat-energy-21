@@ -1,6 +1,5 @@
 .main {
   padding-top: 27px;
-  padding-bottom: 32px;
 
   &--no-top-padding {
     padding-top: 0;
@@ -10,6 +9,11 @@
 .main__title {
   margin: 0;
   margin-bottom: 37px;
+
+  @media (min-width: $desktop) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .main__description {

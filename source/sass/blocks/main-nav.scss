@@ -31,6 +31,10 @@
     top: 0;
     right: -20px;
     background-color: $gray-300;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet) {
