@@ -14,10 +14,25 @@
 }
 
 @mixin input-placeholder {
-  &.placeholder {
+  &::-webkit-input-placeholder {
+    @content ;
+  }
+
+  &:-moz-placeholder {
+    @content;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    @content;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
     @content;
   }
 }
+
 
 @mixin square($size) {
   width: $size;
