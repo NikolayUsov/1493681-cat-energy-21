@@ -1,5 +1,16 @@
+.secondary-catalog__inner {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .secondary-catalog {
   padding-top: 28px;
+
+  @media (min-width: $desktop) {
+    padding-bottom: 86px;
+  }
 }
 
 .secondary-catalog__title {
@@ -13,4 +24,21 @@
 
 .secondary-catalog__item {
   margin-bottom: 19px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    border: 1px solid $gray-400;
+  }
+
+  &:not(:first-child) {
+    @media (min-width: $tablet) {
+      border-top: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 896px;
+    border-left: none;
+    border-right: none;
+  }
 }

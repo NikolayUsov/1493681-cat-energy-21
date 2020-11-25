@@ -1,4 +1,19 @@
+.specification {
+  @include reset-list();
+}
+
 .specification__item {
   font-size: 12px;
   line-height: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 9px 0;
+    border-bottom: 1px solid $gray-400;
+  }
 }

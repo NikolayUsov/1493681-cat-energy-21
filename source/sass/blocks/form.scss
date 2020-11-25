@@ -10,6 +10,14 @@ $border-color: $light-gray;
   }
 }
 
+.form__double-column {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
 .form__fieldset {
   padding: 0;
   margin: 0;
@@ -26,6 +34,12 @@ $border-color: $light-gray;
     border: 1px solid #e7e7e7;
     padding-top: 35px;
     padding-bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 69px;
   }
 }
 
@@ -90,15 +104,24 @@ $border-color: $light-gray;
   }
 }
 
+.form__submit-group {
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 .form__button {
   min-width: 100%;
   border: none;
 
   @media (min-width: $tablet) {
     min-width: 282px;
+    margin-right: 60px;
   }
 
   @media (min-width: $desktop) {
     min-width: 568px;
+    margin-right: 80px;
   }
 }

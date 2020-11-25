@@ -10,8 +10,27 @@
 
 .main-catalog__list {
   @include reset-list();
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(324px, 1fr));
+    grid-template-rows: minmax(430px, 1fr);
+    column-gap: 60px;
+    row-gap: 140px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(245px, 1fr));
+    column-gap: 80px;
+    row-gap: 143px;
+  }
 }
 
 .main-catalog__item {
   margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }

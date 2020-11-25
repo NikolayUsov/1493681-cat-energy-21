@@ -1,13 +1,65 @@
 .contacts {
+  background-color: $white;
+}
+
+.contacts--gray {
+  background-color: $gray-100;
+}
+
+.contacts-info {
   display: flex;
+  padding-top: 22px;
+  padding-bottom: 26px;
+  justify-content: flex-start;
+  background-color: inherit;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    background-color: white;
+    width: 570px;
+    padding: 76px;
+    top: 50px;
+    left: 110px;
+    z-index: 3;
+  }
+}
+
+.contacts__wraper {
+  position: relative;
 }
 
 .contacts__welcome {
   flex-basis: 50%;
   margin: 0;
+  color: $black-100;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contacts__address {
   flex-basis: 50%;
   margin: 0;
+  line-height: 20px;
+
+  @media (min-width: $tablet) {
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.contacts__map {
+  min-height: 362px;
+  background-color: $gray-100;
+  background-image: url("../../img/map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

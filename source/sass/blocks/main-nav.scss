@@ -29,8 +29,17 @@
   &::after {
     @include pseudo(100vw, 1px);
     top: 0;
-    right: -20px;
+    left: -20px;
     background-color: $gray-300;
+
+    @media (min-width: 436px) {
+      @include pseudo(100%, 1px);
+      left: 0;
+    }
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet) {
