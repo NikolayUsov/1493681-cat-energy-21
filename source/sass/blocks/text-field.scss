@@ -26,8 +26,8 @@ $border-color:$light-gray;
   border: 1px solid $border-color;
   flex-grow: 1;
 
-  @include input-placeholder {
-    @include form-label();
+  &::placeholder {
     color: $text-color;
+    opacity: 1;
   }
 }

@@ -14,14 +14,20 @@
       <nav class="main-nav header__nav">
         <div class="main-nav__inner">
           <a href="index.html" class="main-nav__logo logo">
-            <img src="/img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+            <picture>
+              <source media="(min-width: 768px) and (max-width: 1439px)"
+                      srcset="img/logo-tablet.svg">
+              <source media="(min-width: 1440px)"
+                      srcset="img/logo-desktop.svg">
+                      <img src="/img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+           </picture>
           </a>
           <a class="main-nav__text-logo"><img src="/img/text-logo.svg" width="101" height="18" alt="catenergy"></a>
           <button type="button" class="main-nav__toggle burger burger__button" aria-label="Показать  меню"></button>
         </div>
         <ul class="main-nav__list burger__menu">
           <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link text text--uppercase">главная</a>
+            <a href="index.html" class="main-nav__link  text text--uppercase">главная</a>
           </li>
           <li class="main-nav__item">
             <a href="catalog.html" class="main-nav__link text text--uppercase">каталог продукции</a>
@@ -39,7 +45,7 @@
       <p class="main__description text text--small text--uppercase"> Заполните анкету, и мы подберем программу питания для вашего кота</p>
     </div>
     <form class="main__form form" method="post" action="https://echo.htmlacademy.ru">
-      <div class="wrapper  form__double-column">
+      <div class="wrapper  form__group--double-column">
         <fieldset class="form__fieldset">
           <legend class="form__legend visually-hidden">Данные Вашего кота</legend>
           <ul class="form__group">
@@ -78,7 +84,7 @@
       <div class="wrapper">
         <fieldset class="form__fieldset">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <ul class="form__group form__double-column">
+          <ul class="form__group form__group--double-column">
             <li class="form__option text-field">
               <label class="text-field__label" for="email">E-mail:*</label>
               <input class="text-field__input text-field__input--mail" type="email" id="email" name="email"

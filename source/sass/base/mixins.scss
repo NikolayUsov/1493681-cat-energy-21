@@ -13,27 +13,6 @@
   text-transform: uppercase;
 }
 
-@mixin input-placeholder {
-  &::-webkit-input-placeholder {
-    @content ;
-  }
-
-  &:-moz-placeholder {
-    @content;
-    opacity: 1;
-  }
-
-  &::-moz-placeholder {
-    @content;
-    opacity: 1;
-  }
-
-  &:-ms-input-placeholder {
-    @content;
-  }
-}
-
-
 @mixin square($size) {
   width: $size;
   height: $size;
@@ -44,4 +23,10 @@
   content: "";
   width: $width;
   height: $height;
+}
+
+@mixin above($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
 }

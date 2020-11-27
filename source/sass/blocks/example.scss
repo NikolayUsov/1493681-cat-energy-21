@@ -39,17 +39,17 @@
   @include reset-list();
   display: flex;
   flex-wrap: wrap;
-  max-width: 366px;
   justify-content: space-between;
   flex-grow: 1;
+
+  @include above($tablet) {
+    max-width: 366px;
+  }
 }
 
 .example__stats-item {
   margin: 0;
   margin-bottom: 26px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;

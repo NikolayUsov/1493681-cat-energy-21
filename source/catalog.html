@@ -14,17 +14,23 @@
       <nav class="main-nav header__nav">
         <div class="main-nav__inner">
           <a href="index.html" class="main-nav__logo logo">
-            <img src="/img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+            <picture>
+              <source media="(min-width: 768px) and (max-width: 1439px)"
+                      srcset="img/logo-tablet.svg">
+              <source media="(min-width: 1440px)"
+                      srcset="img/logo-desktop.svg">
+                      <img src="/img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+           </picture>
           </a>
           <a class="main-nav__text-logo"><img src="/img/text-logo.svg" width="101" height="18" alt="catenergy"></a>
           <button type="button" class="main-nav__toggle burger burger__button" aria-label="Показать  меню"></button>
         </div>
         <ul class="main-nav__list burger__menu">
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link text text--uppercase">главная</a>
+            <a href="index.html" class="main-nav__link text text--uppercase">главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html" class="main-nav__link text text--uppercase">каталог продукции</a>
+            <a href="catalog.html" class="main-nav__link main-nav__link--active-link text text--uppercase">каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a href="form.html" class="main-nav__link text text--uppercase">подбор программы</a>
