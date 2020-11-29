@@ -11,6 +11,14 @@
   border: 1px solid $gray-400;
   border-radius: 6px;
   padding: 3px 5px;
+  margin: 0 18px;
+  flex-grow: 1;
+
+  @include above($tablet) {
+    height: 6px;
+    margin: 0 14px;
+    background-color: $gray-400;
+  }
 }
 
 .range__scale-progress {
@@ -38,5 +46,26 @@
   &--after {
     right: 0;
     top: 0;
+  }
+
+  @include above($tablet) {
+    @include square(34px);
+    border-radius: 50%;
+    border: 1px solid $gray-400;
+    background-color: $white;
+    top: -18px;
+    left: 50%;
+    box-shadow: 0 1px 3px rgba($black, 0.16);
+  }
+
+  &::before {
+    @include above($tablet) {
+      @include pseudo (8px, 8px);
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $basic-green;
+    }
   }
 }

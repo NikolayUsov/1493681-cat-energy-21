@@ -20,5 +20,9 @@
 }
 
 .photo-switcher__control {
-  padding: 0 25px;
+  padding: 0 45px;
+
+  @include above ($tablet) {
+    padding: 0 69px;
+  }
 }

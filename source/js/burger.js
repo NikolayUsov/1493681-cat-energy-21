@@ -1,6 +1,8 @@
-const burgerBtn= document.querySelector(".burger__button");
-const burgerMenu = document.querySelector(".burger__menu")
-burgerBtn.addEventListener("click",function(evt){
+const mainNavToggle= document.querySelector(".main-nav__toggle");
+const navMain = document.querySelector(".main-nav");
+navMain.classList.remove('main-nav--nojs');
+
+mainNavToggle.addEventListener("click",function(evt){
   evt.preventDefault();
-  burgerMenu.classList.toggle("burger__menu--show")
+  navMain.classList.toggle("main-nav--open");
 });
