@@ -4,6 +4,18 @@
   align-items: center;
 }
 
+.range__value {
+  margin: 0;
+
+  @include above($tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: ($black, 0.24);
+  }
+}
+
 .range__scale {
   min-width: 84px;
   height: 14px;

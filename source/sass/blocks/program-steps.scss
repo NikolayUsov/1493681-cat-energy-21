@@ -5,6 +5,11 @@
 .program-steps__title {
   margin: 0;
   margin-bottom: 38px;
+
+  @include above($tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .program-steps__list {

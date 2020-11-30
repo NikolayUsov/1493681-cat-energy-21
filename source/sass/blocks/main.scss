@@ -10,9 +10,10 @@
   margin: 0;
   margin-bottom: 37px;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 153px;
   }
 }
 
