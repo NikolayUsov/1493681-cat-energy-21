@@ -5,14 +5,17 @@
 }
 
 .range__value {
-  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
   @include above($tablet) {
     font-size: 20px;
     line-height: 30px;
     border-bottom-width: 1px;
     border-bottom-style: dotted;
-    border-bottom-color: ($black, 0.24);
+    border-bottom-color: $black-opacity;
   }
 }
 
@@ -49,15 +52,14 @@
   position: absolute;
   border-radius: 6px;
   cursor: pointer;
+  top: 0;
 
   &--before {
     left: 0;
-    top: 0;
   }
 
   &--after {
     right: 0;
-    top: 0;
   }
 
   @include above($tablet) {

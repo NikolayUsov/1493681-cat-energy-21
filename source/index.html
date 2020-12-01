@@ -15,12 +15,10 @@
         <div class="main-nav__inner">
           <a href="#" class="main-nav__logo logo">
             <picture>
-              <source media="(min-width: 768px) and (max-width: 1439px)"
-                      srcset="img/logo-tablet.svg">
-              <source media="(min-width: 1440px)"
-                      srcset="img/logo-desktop.svg">
-                      <img src="/img/logo-mobile.svg" width="33" height="37" alt="Логотип">
-           </picture>
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <img src="/img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+            </picture>
           </a>
           <a class="main-nav__text-logo"><img src="/img/text-logo.svg" width="101" height="18" alt="catenergy"></a>
           <button type="button" class="main-nav__toggle" aria-label="Показать  меню"></button>
@@ -120,13 +118,13 @@
             </div>
           </div>
           <div class="photo-switcher__control range">
-            <p class="range__value text text--uppercase">Было</p>
+            <button type="button" class="range__value text text--uppercase">Было</button>
             <div class="range__scale">
               <div class="range__scale-progress">
                 <button type="button" class="range__button-switcher range__button-switcher--before"></button>
               </div>
             </div>
-            <p class="range__value text text--uppercase">Стало</p>
+            <button type="button" class="range__value text text--uppercase">Стало</button>
           </div>
         </div>
       </div>
