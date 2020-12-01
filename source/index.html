@@ -44,7 +44,11 @@
         <p class="promo__describe text text--biggest">Функциональное <br> питание для котов</p>
         <p class="promo__tagline text text--small text--uppercase">Занялся собой? Займись котом!</p>
         <div class="promo__picture">
-          <img src="img/promo-picture-mobile.png" width="280px" height="270" alt="Промо картинка одного из нашего товара">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/promo-picture-desktop.png 1x, img/promo-picture-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-picture-desktop.png 1x, img/promo-picture-desktop@2x.png 2x">
+            <img src="img/promo-picture-mobile.png" srcset="img/promo-picture-mobile@2x.png 2x" width="280px" height="270" alt="Промо картинка одного из нашего товара">
+          </picture>
         </div>
         <a class="button  promo__button">подобрать программу</a>
       </div>
@@ -53,13 +57,13 @@
         <div class="wrapper">
           <h2 class="visually-hidden">Варианты программ питания</h2>
             <ul class="programs__list">
-              <li class="programs__item program-card">
+              <li class="programs__item program-card program-card--slim">
                 <h3 class="program-card__title text text--big text--uppercase">похудение</h3>
                 <p class="program-card__description">Ваш кот весит больше собаки и почти утратил способность лазить по
                   деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
                 <a href="catalog.html" class="program-card__link text text--uppercase">каталог slim</a>
                 </li>
-              <li class="programs__item program-card">
+              <li class="programs__item program-card program-card--strong">
                 <h3 class="program-card__title text text--big text--uppercase">Набор массы</h3>
                 <p class="program-card__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
                   Pro поможет вашему коту нарастить необходимые мышцы!</p>
@@ -111,10 +115,16 @@
         <div class="example__interactive photo-switcher">
           <div class="photo-switcher__photo">
             <div class="photo-switcher__before photo-switcher__active">
-              <img src="img/photo-switcher-before.png"  width="311" height="232" alt="Фотографи кота до старта программы">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-fat-tablet-desktop.png 1x, img/cat-fat-tablet-desktop@2x.png 2x">
+                <img src="img/photo-switcher-before.png" srcset="img/photo-switcher-before@2x.png 2x"  width="311" height="282" alt="Фотографи кота до старта программы">
+              </picture>
             </div>
             <div class="photo-switcher__after">
-              <img src="img/phot-switcher-after.png" width="251" height="240" alt="Фотографи кота после старта программы">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-skinny-tablet-desktop.png 1x, img/cat-skinny-tablet-desktop@2x.png 2x">
+                <img src="img/phot-switcher-after.png" srcset="img/phot-switcher-after@2x.png 2x" width="251" height="240" alt="Фотографи кота после старта программы">
+              </picture>
             </div>
           </div>
           <div class="photo-switcher__control range">

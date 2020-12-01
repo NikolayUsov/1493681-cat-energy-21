@@ -24,9 +24,59 @@
     }
 
     @media (min-width: $desktop) {
-      @include pseudo(50px,50px);
-      top: 30px;
-      left: 20px;
+      @include pseudo(100px,100px);
+      top: 44px;
+      left: 70px;
+    }
+  }
+
+  &--slim {
+    &::after {
+      @include pseudo (55px,55px);
+      top: 25px;
+      left: 18px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../img/program-card-mobile-slim.svg");
+
+      @media (min-width: $tablet) {
+        @include pseudo (140px,190px);
+        background-image: url("../img/program-card-tablet-slim.svg");
+        left: 488px;
+        top: 30px;
+      }
+
+      @media (min-width: $desktop) {
+        @include pseudo (100px,106px);
+        background-image: url("../img/program-card-desktop-slim.svg");
+        top: 37px;
+        left: 70px;
+      }
+    }
+  }
+
+  &--strong {
+    &::after {
+      @include pseudo (67px,55px);
+      top: 25px;
+      left: 9px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../img/program-card-mobile-strong.svg");
+
+      @media (min-width: $tablet) {
+        @include pseudo (268px,112px);
+        background-image: url("../img/program-card-tablet-strong.svg");
+        left: 397px;
+        top: 81px;
+      }
+
+      @media (min-width: $desktop) {
+        @include pseudo (134px,56px);
+        background-image: url("../img/program-card-desktop-strong.svg");
+        top: 69px;
+        left: 50px;
+      }
     }
   }
 }

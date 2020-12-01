@@ -4,15 +4,27 @@ $header-height: 94px;
   padding-top: 27px;
   position: relative;
 
+  @include above($tablet) {
+    padding-bottom: 526px;
+  }
+
+  @include above($desktop) {
+    padding-bottom: 185px;
+  }
+
   &::after {
     @include pseudo(100%,302px);
     top: 0;
     left: 0;
     z-index: -2;
-    background-image: url("../img/promo-bg.png");
+    background-image: url("../img/promo-bg_mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-bg_mobile@2x.jpg");
+    }
 
     @media (min-width: $tablet) {
       display: none;
@@ -20,10 +32,15 @@ $header-height: 94px;
 
     @include above($desktop) {
       display: block;
-      width: calc(50vw - 17px);
+      width: 50vw;
       left: 50vw;
       top: -$header-height;
       height: calc(100% + #{$header-height});
+      background-image: url("../img/promo-desktop-bg.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-desktop-bg@2x.jpg");
+      }
     }
   }
 }
@@ -33,6 +50,16 @@ $header-height: 94px;
   height: 270px;
   display: flex;
   justify-content: center;
+
+  @include above($tablet) {
+    position: absolute;
+    z-index: -1;
+    top: 210px;
+  }
+
+  @include above($desktop) {
+    top: 22px;
+  }
 
   img {
     object-fit: none;
@@ -65,8 +92,8 @@ $header-height: 94px;
   @media (min-width: $tablet) {
     text-align: left;
     padding-left: 62px;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 20px;
+    line-height: 20px;
     color: $black;
   }
 }
