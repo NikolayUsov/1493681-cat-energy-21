@@ -1,31 +1,29 @@
+$header-height: 94px;
+
 .promo {
   padding-top: 27px;
   position: relative;
-
-  &::before {
-    @include pseudo(100%,302px);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: rgba($basic-green, 0.85);
-
-    @media (min-width: $tablet) {
-      display: none;
-    }
-  }
 
   &::after {
     @include pseudo(100%,302px);
     top: 0;
     left: 0;
     z-index: -2;
-    background-image: url("../img/index-background.jpg");
+    background-image: url("../img/promo-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
 
     @media (min-width: $tablet) {
       display: none;
+    }
+
+    @include above($desktop) {
+      display: block;
+      width: calc(50vw - 17px);
+      left: 50vw;
+      top: -$header-height;
+      height: calc(100% + #{$header-height});
     }
   }
 }

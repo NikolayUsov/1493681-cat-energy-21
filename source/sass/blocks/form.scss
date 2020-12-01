@@ -10,7 +10,7 @@ $border-color: $light-gray;
   }
 }
 
-.form__double-column {
+.form__group--double-column {
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,6 +85,13 @@ $border-color: $light-gray;
   }
 }
 
+.form__group--double-column > .form__option {
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
+
 .form__textarea {
   @include form-label();
 
@@ -98,9 +105,9 @@ $border-color: $light-gray;
   padding: 15px 13px;
   border: 1px solid $border-color;
 
-  @include input-placeholder {
-    @include form-label();
+  &::placeholder {
     color: $text-color;
+    opacity: 1;
   }
 }
 

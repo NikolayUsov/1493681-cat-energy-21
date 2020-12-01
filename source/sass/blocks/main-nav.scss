@@ -7,14 +7,46 @@
   }
 }
 
+.main-nav__toggle {
+  width: 24px;
+  height: 23px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("../img/burger-close.svg");
+  background-position: center;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle,
+.main-nav--open .main-nav__toggle {
+  background-image: url("../img/burger-open.svg");
+}
+
 .main-nav__list {
   @include reset-list;
+  display: none;
 
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
   }
+
+  @include above($desktop) {
+    max-width: 50%;
+  }
+}
+
+.main-nav--nojs .main-nav__list,
+.main-nav--open .main-nav__list {
+  display: block;
 }
 
 .main-nav__item {
@@ -60,13 +92,32 @@
   text-align: center;
   font-size: 20px;
   line-height: 20px;
+  font-weight: 500;
   border: none;
 
   @media (min-width: $tablet) {
     padding: 0;
     font-size: 18px;
     line-height: 24px;
+    font-weight: normal;
     border-bottom: 2px solid transparent;
+  }
+
+  @include above($desktop) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.main-nav__list--index-page .main-nav__link {
+  @include above($desktop) {
+    color: $white;
+  }
+}
+
+.main-nav__list--index-page .main-nav__link--active-link {
+  @include above($desktop) {
+    border-color: $white;
   }
 }
 

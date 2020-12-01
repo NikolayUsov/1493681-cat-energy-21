@@ -2,4 +2,14 @@
   display: inline-block;
   width: 33px;
   height: 37px;
+
+  @include above($tablet) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @include above ($desktop) {
+    width: 202px;
+    height: 59px;
+  }
 }

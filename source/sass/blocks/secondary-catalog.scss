@@ -2,11 +2,16 @@
   @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
 .secondary-catalog {
   padding-top: 28px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 76px;
+  }
 
   @media (min-width: $desktop) {
     padding-bottom: 86px;
@@ -16,10 +21,47 @@
 .secondary-catalog__title {
   margin: 0;
   margin-bottom: 35px;
+
+  @include above($tablet) {
+    display: inline-block;
+    font-size: 36px;
+    line-height: 36px;
+    position: relative;
+    padding-left: 37px;
+    padding-right: 37px;
+    background-color: $white;
+  }
+
+  @include above ($desktop) {
+    padding-left: 0;
+  }
+
+  &::before {
+    @include above($tablet) {
+      @include pseudo(100vw, 2px);
+      background-color: $basic-green;
+      top: 50%;
+      left: -30px;
+      z-index: -1;
+      transform: translateY(-50%);
+    }
+
+    @include above ($desktop) {
+      left: -110px;
+    }
+  }
 }
 
 .secondary-catalog__list {
   @include reset-list();
+
+  @include above($tablet) {
+    margin-bottom: 69px;
+  }
+
+  @include above($desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .secondary-catalog__item {

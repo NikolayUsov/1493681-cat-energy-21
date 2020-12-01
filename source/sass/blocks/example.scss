@@ -5,13 +5,19 @@
 
 .example__wrapper {
   @media (min-width: $desktop) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .example__title {
   margin: 0;
   margin-bottom: 33px;
+
+  @include above($tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__description {
@@ -39,17 +45,17 @@
   @include reset-list();
   display: flex;
   flex-wrap: wrap;
-  max-width: 366px;
   justify-content: space-between;
   flex-grow: 1;
+
+  @include above($tablet) {
+    max-width: 366px;
+  }
 }
 
 .example__stats-item {
   margin: 0;
   margin-bottom: 26px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
@@ -70,6 +76,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop) {

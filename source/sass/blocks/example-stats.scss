@@ -1,0 +1,45 @@
+.example-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 14px 5px;
+  padding-bottom: 0;
+  width: 124px;
+  border: 1px solid $gray-400;
+  border-radius: 3px;
+
+  @include above($tablet) {
+    width: 162px;
+  }
+}
+
+.example-stats__title,
+.example-stats__description {
+  display: inline-block;
+}
+
+.example-stats__title {
+  margin-bottom: 13px;
+
+  @include above($tablet) {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 11px;
+  }
+}
+
+.example-stats__description {
+  margin-bottom: -15px;
+  padding: 0 11px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: $gray;
+
+  @include above($tablet) {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: -7px;
+  }
+}
