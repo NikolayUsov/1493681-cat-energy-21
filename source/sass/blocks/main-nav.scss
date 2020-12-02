@@ -95,6 +95,14 @@
   font-weight: 500;
   border: none;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet) {
     padding: 0;
     font-size: 18px;

@@ -14,6 +14,12 @@
   opacity: 1;
 }
 
+.photo-switcher__photo {
+  @include above($desktop) {
+    margin-bottom: 16px;
+  }
+}
+
 .photo-switcher__photo img {
   display: block;
   object-fit: none;

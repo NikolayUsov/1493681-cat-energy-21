@@ -1,5 +1,9 @@
 .program-steps {
   padding-bottom: 42px;
+
+  @include above($desktop) {
+    padding-bottom: 73px;
+  }
 }
 
 .program-steps__title {
@@ -9,6 +13,10 @@
   @include above($tablet) {
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @include above($desktop) {
+    margin-bottom: 71px;
   }
 }
 
@@ -42,6 +50,8 @@
     display: block;
     flex-shrink: 0;
     margin-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include square(60px);
     background-color: $basic-green;
@@ -53,6 +63,22 @@
 
       @include square(80px);
     }
+  }
+
+  &--leaf::before {
+    background-image: url("../img/program-steps-leaf.svg");
+  }
+
+  &--tube::before {
+    background-image: url("../img/program-steps-tube.svg");
+  }
+
+  &--eat::before {
+    background-image: url("../img/program-steps-eat.svg");
+  }
+
+  &--clock::before {
+    background-image: url("../img/program-steps-clock.svg");
   }
 
   &::after {
