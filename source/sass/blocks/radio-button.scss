@@ -1,9 +1,54 @@
+.radio-button__input {
+  display: none;
+}
+
 .radio-button__label {
   @include form-label();
   color: $dark-gray;
+  padding-left: 45px;
+  position: relative;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 60px;
   }
+
+  &::before {
+    @include pseudo(30px, 30px);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid $gray-400;
+    border-radius: 50%;
+
+    @include above($tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover::before {
+    border: 1px solid $gray-500;
+  }
+}
+
+.radio-button__input:checked + .radio-button__label::after {
+  @include pseudo(13px, 13px);
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  background-color: $basic-green;
+  border-radius: 50%;
+
+  @include above($tablet) {
+    width: 17px;
+    height: 17px;
+    left: 12px;
+  }
+}
+
+.radio-button__input:disabled + label {
+  opacity: 0.3;
 }

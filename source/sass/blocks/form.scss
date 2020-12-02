@@ -69,6 +69,12 @@ $border-color: $light-gray;
   @include reset-list();
 }
 
+.form__group--radio {
+  @include above($tablet) {
+    padding: 25px 27px 30px;
+  }
+}
+
 .form__group--checkboxes {
   @media (min-width: $tablet) {
     display: grid;
@@ -82,6 +88,12 @@ $border-color: $light-gray;
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.form__group--cat-info .form__option {
+  @include above($tablet) {
+    margin-bottom: 20px;
   }
 }
 
@@ -108,6 +120,11 @@ $border-color: $light-gray;
   &::placeholder {
     color: $text-color;
     opacity: 1;
+  }
+
+  @include above($tablet) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
