@@ -1,12 +1,19 @@
 $border-color: $light-gray;
 
-.form {
+.form__wrapper {
+  min-width: 320px;
+  max-width: 476px;
+  padding: 0 20px;
+  margin: 0 auto;
+
   @media (min-width: $tablet) {
-    padding: 0 40px;
+    max-width: $desktop;
+    padding: 0 70px;
   }
 
   @media (min-width: $desktop) {
-    padding: 0;
+    max-width: $desktop;
+    padding: 0 110px;
   }
 }
 
@@ -18,7 +25,7 @@ $border-color: $light-gray;
   }
 }
 
-.form__inner--wrapper .wrapper {
+.form__inner--wrapper .form__wrapper {
   @media (min-width: $desktop) {
     max-width: none;
     padding: 0;
@@ -45,7 +52,7 @@ $border-color: $light-gray;
 }
 
 .form__fieldset--green {
-  border-top: 2px solid green;
+  border-top: 2px solid $basic-green;
 }
 
 .form__fieldset--radio-group {
@@ -70,13 +77,35 @@ $border-color: $light-gray;
   color: $black;
   margin: 0;
   margin-bottom: 32px;
+  margin-top: -0.75em;
   position: relative;
-  display: inline-flex;
+  display: inline-block;
+  background-color: $white;
+  padding-right: 20px;
 
   @media (min-width: $tablet) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
+    padding-right: 40px;
+  }
+
+  &::before {
+    @include pseudo (20px, 100%);
+    top: 0;
+    left: -20px;
+    background-color: $white;
+
+    @include above ($tablet) {
+      width: 40px;
+      left: -40px;
+    }
+  }
+}
+
+.form__legend-fake br {
+  @include above ($tablet) {
+    display: none;
   }
 }
 
