@@ -15,6 +15,12 @@
     line-height: 60px;
     margin-bottom: 153px;
   }
+
+  &--form {
+    @media (min-width: $tablet) {
+      margin-bottom: 56px;
+    }
+  }
 }
 
 .main__description {

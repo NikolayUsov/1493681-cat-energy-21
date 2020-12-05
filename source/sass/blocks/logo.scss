@@ -3,6 +3,14 @@
   width: 33px;
   height: 37px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @include above($tablet) {
     width: 174px;
     height: 52px;

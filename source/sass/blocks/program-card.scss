@@ -1,13 +1,19 @@
 
 .program-card {
   width: 100%;
-  min-height: 280px;
   padding: 40px 20px 25px;
   background-color: $gray-100;
   position: relative;
 
   @media (min-width: $tablet) {
     padding: 77px 0 53px 52px;
+  }
+
+  @include above($desktop) {
+    display: flex;
+    padding: 77px 51px 59px 52px;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &::before {
@@ -24,9 +30,59 @@
     }
 
     @media (min-width: $desktop) {
-      @include pseudo(50px,50px);
-      top: 30px;
-      left: 20px;
+      @include pseudo(100px,100px);
+      top: 44px;
+      left: 70px;
+    }
+  }
+
+  &--slim {
+    &::after {
+      @include pseudo (55px,55px);
+      top: 25px;
+      left: 18px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../img/program-card-mobile-slim.svg");
+
+      @media (min-width: $tablet) {
+        @include pseudo (140px,190px);
+        background-image: url("../img/program-card-tablet-slim.svg");
+        left: 488px;
+        top: 30px;
+      }
+
+      @media (min-width: $desktop) {
+        @include pseudo (100px,106px);
+        background-image: url("../img/program-card-desktop-slim.svg");
+        top: 37px;
+        left: 70px;
+      }
+    }
+  }
+
+  &--strong {
+    &::after {
+      @include pseudo (67px,55px);
+      top: 25px;
+      left: 9px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../img/program-card-mobile-strong.svg");
+
+      @media (min-width: $tablet) {
+        @include pseudo (268px,112px);
+        background-image: url("../img/program-card-tablet-strong.svg");
+        left: 397px;
+        top: 81px;
+      }
+
+      @media (min-width: $desktop) {
+        @include pseudo (134px,56px);
+        background-image: url("../img/program-card-desktop-strong.svg");
+        top: 69px;
+        left: 50px;
+      }
     }
   }
 }
@@ -45,24 +101,59 @@
 
   @media (min-width: $desktop) {
     padding-left: 162px;
+    margin-bottom: 73px;
   }
 }
 
 .program-card__description {
   margin: 0;
-  margin-bottom: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $border-link-color;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 24px;
+    color: $black;
     margin-bottom: 46px;
     max-width: 377px;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  @include above($desktop) {
+    max-width: none;
   }
 }
 
 .program-card__link {
   display: inline-block;
-  width: 100%;
-  padding-top: 15px;
-  border-top: 1px solid $border-link-color;
+  position: relative;
+  padding-right: 46px;
+
+  &::before {
+    @include pseudo(32px, 10px);
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/arrow.svg");
+    transform-origin: left center;
+    transition: transform 200ms ease-in-out;
+  }
+
+  &:hover::before {
+    transform: translateY(-50%) scaleX(1.4);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include above($tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    align-self: flex-start;
+  }
 }

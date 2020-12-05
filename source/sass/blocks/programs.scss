@@ -1,6 +1,11 @@
 .programs {
   padding-top: 22px;
   padding-bottom: 28px;
+
+  @include above($desktop) {
+    padding-top: 82px;
+    padding-bottom: 71px;
+  }
 }
 
 .programs__list {
