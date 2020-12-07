@@ -2,8 +2,15 @@
   background-color: $example-bg-color;
   padding: 27px 0 25px;
 
+  @include above($tablet) {
+    background-image: linear-gradient(to bottom, #{$white} 61%, #{$gray} 36%);
+    background-color: transparent;
+  }
+
   @include above($desktop) {
-    background-image: linear-gradient(to bottom, #{$white} 36%, #{$example-bg-color} 36%);
+    background-image: linear-gradient(to bottom, #{$white} 0%, #{$white} 36%, transparent 36%),
+      linear-gradient(to right, #{$gray-100} calc(50vw + 319px), #{$gray} 50vw);
+    background-color: transparent;
     padding-bottom: 90px;
   }
 }

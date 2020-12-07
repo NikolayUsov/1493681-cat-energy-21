@@ -18,13 +18,13 @@ $header-height: 94px;
     top: 0;
     left: 0;
     z-index: -2;
-    background-image: url("../img/promo-bg_mobile.jpg");
+    background-image: url("../img/promo-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-bg_mobile@2x.jpg");
+      background-image: url("../img/promo-mobile@2x.jpg");
     }
 
     @media (min-width: $tablet) {
@@ -37,10 +37,10 @@ $header-height: 94px;
       left: 50vw;
       top: -$header-height;
       height: calc(100% + #{$header-height});
-      background-image: url("../img/promo-desktop-bg.jpg");
+      background-image: url("../img/promo-desktop.jpg");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/promo-desktop-bg@2x.jpg");
+        background-image: url("../img/promo-desktop@2x.jpg");
       }
     }
   }

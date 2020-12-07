@@ -59,7 +59,28 @@
 .contacts__map {
   min-height: 362px;
   background-color: $gray-100;
-  background-image: url("../../img/map.png");
+  background-image: url("../img/map-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include retina() {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  @include above($tablet) {
+    min-height: 400px;
+    background-image: url("../img/map-tablet.jpg");
+
+    @include retina() {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @include above($desktop) {
+    background-image: url("../img/map-desktop.jpg");
+
+    @include retina() {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
+  }
 }

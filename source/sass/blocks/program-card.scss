@@ -41,20 +41,21 @@
       @include pseudo (55px,55px);
       top: 25px;
       left: 18px;
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      background-image: url("../img/program-card-mobile-slim.svg");
+      background-image: url("../img/program-card-slim.svg");
 
       @media (min-width: $tablet) {
         @include pseudo (140px,190px);
-        background-image: url("../img/program-card-tablet-slim.svg");
+        background-image: url("../img/program-card-slim.svg");
         left: 488px;
         top: 30px;
       }
 
       @media (min-width: $desktop) {
         @include pseudo (100px,106px);
-        background-image: url("../img/program-card-desktop-slim.svg");
+        background-image: url("../img/program-card-slim.svg");
         top: 37px;
         left: 70px;
       }
@@ -67,19 +68,20 @@
       top: 25px;
       left: 9px;
       background-position: center;
+      background-size: contain;
       background-repeat: no-repeat;
-      background-image: url("../img/program-card-mobile-strong.svg");
+      background-image: url("../img/program-card-strong.svg");
 
       @media (min-width: $tablet) {
         @include pseudo (268px,112px);
-        background-image: url("../img/program-card-tablet-strong.svg");
+        background-image: url("../img/program-card-strong.svg");
         left: 397px;
         top: 81px;
       }
 
       @media (min-width: $desktop) {
         @include pseudo (134px,56px);
-        background-image: url("../img/program-card-desktop-strong.svg");
+        background-image: url("../img/program-card-strong.svg");
         top: 69px;
         left: 50px;
       }
@@ -132,7 +134,7 @@
   padding-right: 46px;
 
   &::before {
-    @include pseudo(32px, 10px);
+    @include pseudo(24px, 10px);
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -144,7 +146,7 @@
   }
 
   &:hover::before {
-    transform: translateY(-50%) scaleX(1.4);
+    transform: translateY(-50%) scaleX(1.3333);
   }
 
   &:active {
