@@ -44,14 +44,13 @@ const sprite = () => {
   .pipe(gulp.dest("build/img"))
 }
 exports.sprite = sprite;
-// html
 
+// html
 const html = () => {
-  return gulp.src("source/**/*html")
-  .pipe(htmlmin({collapseWhitespace: true}))
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.src("build"))
 }
-
 exports.html = html;
 // Styles
 
@@ -90,7 +89,7 @@ const copy = () => {
   {
     base: "source"
   })
-  .pipe(gulp.dest(build))
+  .pipe(gulp.dest("build"))
 }
 exports.copy = copy;
 
@@ -117,13 +116,13 @@ exports.server = server;
 
 //build
 const build = gulp.series(
-  clean,
+  clean, styles,
   gulp.parallel (
-    styles,
     html,
     sprite,
     images,
-    createWebp
+    createWebp,
+    copy
   )
 )
 exports.build = build;
