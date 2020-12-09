@@ -49,7 +49,7 @@ exports.sprite = sprite;
 const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.src("build"))
+  .pipe(gulp.dest("build"))
 }
 exports.html = html;
 // Styles
@@ -61,10 +61,10 @@ const styles = () => {
     .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
-      csso()
+      //csso()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(rename("styles.min.css"))
+    //.pipe(rename("styles.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
@@ -75,7 +75,7 @@ exports.styles = styles;
 const scripts = () => {
   return gulp.src("source/js/script.js")
   //.pipe(uglify())
-  .pipe(rename("scripts.min.js"))
+  //.pipe(rename("scripts.min.js"))
   .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 }
@@ -103,7 +103,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -116,13 +116,14 @@ exports.server = server;
 
 //build
 const build = gulp.series(
-  clean, styles,
+  clean,
   gulp.parallel (
+    styles,
     html,
     sprite,
-    images,
     createWebp,
-    copy
+    copy,
+    scripts
   )
 )
 exports.build = build;
@@ -134,5 +135,5 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
