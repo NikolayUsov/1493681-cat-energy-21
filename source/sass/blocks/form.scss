@@ -52,7 +52,14 @@ $border-color: $light-gray;
 }
 
 .form__fieldset--green {
-  border-top: 2px solid $basic-green;
+  position: relative;
+
+  &::before {
+    @include pseudo(100vw, 2px);
+    top: 1.2em;
+    left: 0;
+    background-color: $basic-green;
+  }
 }
 
 .form__fieldset--radio-group {
@@ -77,7 +84,6 @@ $border-color: $light-gray;
   color: $black;
   margin: 0;
   margin-bottom: 32px;
-  margin-top: -0.75em;
   position: relative;
   display: inline-block;
   background-color: $white;

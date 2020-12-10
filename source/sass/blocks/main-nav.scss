@@ -15,7 +15,7 @@
   cursor: pointer;
   background-repeat: no-repeat;
   background-color: transparent;
-  background-image: url("../img/burger-close.svg");
+  background-image: url("../img/toggle-close.svg");
   background-position: center;
 
   @media (min-width: $tablet) {
@@ -25,7 +25,7 @@
 
 .main-nav--nojs .main-nav__toggle,
 .main-nav--open .main-nav__toggle {
-  background-image: url("../img/burger-open.svg");
+  background-image: url("../img/toggle-open.svg");
 }
 
 .main-nav__list {

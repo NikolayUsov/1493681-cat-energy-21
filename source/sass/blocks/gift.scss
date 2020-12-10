@@ -2,26 +2,77 @@
   width: 100%;
   height: 289px;
   background-color: $basic-green;
-  background-image: url("../img/gift-photo-mobile-bg1.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../img/gift-mobile.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 186px 61px 43px;
+  padding: 59px 71px 43px;
+
+  @include retina() {
+    background-image: url("../img/gift-mobile@2x.png");
+  }
 
   @media (min-width: $tablet) {
     height: 200px;
+    padding: 0 124px 0 88px;
+    background-image: url("../img/gift-tablet.png");
+
+    @include retina() {
+      background-image: url("../img/gift-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop) {
+    padding: 59px 10px 43px;
     width: 245px;
     height: auto;
+    max-height: 289px;
+    background-image: url("../img/gift-desktop.png");
+
+    @include retina() {
+      background-image: url("../img/gift-desktop@2x.png");
+    }
   }
 }
 
 .gift__rule {
   color: $white;
   margin: 0;
-  text-align: center;
   font-size: 16px;
   line-height: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+
+  @include above($tablet) {
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+  }
+
+  @include above($desktop) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  &::before {
+    @include pseudo(80px, 80px);
+    display: block;
+    position: static;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

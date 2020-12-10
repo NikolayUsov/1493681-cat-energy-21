@@ -2,12 +2,11 @@
   @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
   }
 }
 
 .secondary-catalog {
-  padding-top: 28px;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     padding-bottom: 76px;
@@ -19,8 +18,11 @@
 }
 
 .secondary-catalog__title {
+  display: inline-block;
   margin: 0;
   margin-bottom: 35px;
+  padding-right: 24px;
+  position: relative;
 
   @include above($tablet) {
     display: inline-block;
@@ -36,18 +38,23 @@
     padding-left: 0;
   }
 
+  &::after {
+    @include pseudo (100vw, 2px);
+    top: 0.5em;
+    left: 100%;
+    background-color: $basic-green;
+  }
+
   &::before {
     @include above($tablet) {
-      @include pseudo(100vw, 2px);
+      @include pseudo (100vw, 2px);
       background-color: $basic-green;
-      top: 50%;
-      left: -30px;
-      z-index: -1;
-      transform: translateY(-50%);
+      right: 100%;
+      top: 0.5em;
     }
 
-    @include above ($desktop) {
-      left: -110px;
+    @include above($desktop) {
+      right: calc(100% + 40px);
     }
   }
 }

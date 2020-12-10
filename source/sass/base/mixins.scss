@@ -30,3 +30,9 @@
     @content;
   }
 }
+
+@mixin retina() {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}

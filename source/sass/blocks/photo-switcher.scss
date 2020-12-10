@@ -1,11 +1,36 @@
 
-.photo-switcher__before,
+.photo-switcher__before {
+  display: none;
+  width: 100%;
+  min-height: 232px;
+  justify-content: center;
+  opacity: 0;
+
+  @include above ($tablet) {
+    display: flex;
+    position: absolute;
+    opacity: 1;
+    z-index: 2;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    height: 100%;
+  }
+}
+
 .photo-switcher__after {
   display: none;
   width: 100%;
   min-height: 232px;
   justify-content: center;
   opacity: 0;
+
+  @include above ($tablet) {
+    display: flex;
+    position: absolute;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    padding-left: 44px;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 .photo-switcher__before.photo-switcher__active,
@@ -15,6 +40,11 @@
 }
 
 .photo-switcher__photo {
+  @include above($tablet) {
+    position: relative;
+    min-height: 536px;
+  }
+
   @include above($desktop) {
     margin-bottom: 16px;
   }
@@ -23,6 +53,7 @@
 .photo-switcher__photo img {
   display: block;
   object-fit: none;
+  height: 100%;
 }
 
 .photo-switcher__control {

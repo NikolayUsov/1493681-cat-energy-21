@@ -41,5 +41,10 @@
     font-size: 14px;
     line-height: 14px;
     margin-bottom: -7px;
+    background-color: $white;
+  }
+
+  @include above($desktop) {
+    background-color: $gray-100;
   }
 }
