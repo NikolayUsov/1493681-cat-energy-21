@@ -135,7 +135,7 @@ const build = gulp.series(
     styles,
     html,
     sprite,
-    createWebp,
+    //createWebp,
     copy,
     scripts
   )

@@ -7,9 +7,12 @@
 
 .secondary-catalog {
   overflow: hidden;
+  padding-top: 28px;
+  padding-bottom: 35px;
 
   @media (min-width: $tablet) {
     padding-bottom: 76px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop) {
@@ -40,7 +43,7 @@
 
   &::after {
     @include pseudo (100vw, 2px);
-    top: 0.5em;
+    top: 0.6em;
     left: 100%;
     background-color: $basic-green;
   }
@@ -50,7 +53,7 @@
       @include pseudo (100vw, 2px);
       background-color: $basic-green;
       right: 100%;
-      top: 0.5em;
+      top: 0.6em;
     }
 
     @include above($desktop) {
@@ -61,6 +64,7 @@
 
 .secondary-catalog__list {
   @include reset-list();
+  margin-bottom: 43px;
 
   @include above($tablet) {
     margin-bottom: 69px;
@@ -72,7 +76,7 @@
 }
 
 .secondary-catalog__item {
-  margin-bottom: 19px;
+  margin-bottom: 0;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;

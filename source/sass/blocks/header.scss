@@ -10,3 +10,11 @@
     padding-top: 48px;
   }
 }
+
+.header--noindex {
+  border-bottom: 1px solid $gray-200;
+
+  @include above($tablet) {
+    border-bottom: none;
+  }
+}
