@@ -1,4 +1,12 @@
 .header__nav {
   padding-top: 10px;
-  padding-bottom: 17px;
+  padding-bottom: 0;
+
+  @include above($tablet) {
+    padding-top: 24px;
+  }
+
+  @include above($desktop) {
+    padding-top: 48px;
+  }
 }

@@ -1,22 +1,31 @@
 .program-steps {
-  padding-bottom: 42px;
+  padding-bottom: 22px;
+
+  @include above($tablet) {
+    padding-top: 16px;
+    padding-bottom: 103px;
+    border-bottom: 1px solid $gray-300;
+  }
 
   @include above($desktop) {
-    padding-bottom: 73px;
+    padding-bottom: 70px;
+    padding-top: 0;
+    border-bottom: none;
   }
 }
 
 .program-steps__title {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @include above($tablet) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 72px;
   }
 
   @include above($desktop) {
-    margin-bottom: 71px;
+    margin-bottom: 74px;
   }
 }
 
@@ -27,19 +36,22 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(243px, 1fr));
     column-gap: 60px;
-    row-gap: 90px;
+    row-gap: 134px;
   }
 
+  @include above($desktop) {
+    column-gap: 79px;
+  }
   counter-reset: mycount;
 }
 
 .program-steps__item {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   display: flex;
   position: relative;
 
   @media (min-width: $tablet) {
-    max-width: 238px;
+    max-width: 245px;
     margin-bottom: 0;
     padding-left: 0;
     flex-direction: column;
@@ -62,6 +74,10 @@
       margin-right: 0;
 
       @include square(80px);
+    }
+
+    @include above($desktop) {
+      margin-bottom: 35px;
     }
   }
 

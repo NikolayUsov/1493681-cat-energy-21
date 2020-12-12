@@ -1,72 +1,72 @@
 
 .program-card {
   width: 100%;
-  padding: 40px 20px 25px;
+  padding: 36px 20px 18px;
   background-color: $gray-100;
   position: relative;
 
   @media (min-width: $tablet) {
-    padding: 77px 0 53px 52px;
+    padding: 77px 0 56px 52px;
   }
 
   @include above($desktop) {
     display: flex;
     padding: 77px 51px 59px 52px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   &::before {
     @include pseudo(50px,50px);
-    top: 30px;
-    left: 20px;
+    top: 25px;
+    left: 22px;
     background-color: $basic-green;
     border-radius: 50%;
 
     @media (min-width: $tablet) {
       @include pseudo (200px, 200px);
-      left: 443px;
-      top: 30px;
+      left: 446px;
+      top: 92px;
     }
 
     @media (min-width: $desktop) {
       @include pseudo(100px,100px);
-      top: 44px;
-      left: 70px;
+      top: 48px;
+      left: 52px;
     }
   }
 
   &--slim {
     &::after {
-      @include pseudo (55px,55px);
-      top: 25px;
-      left: 18px;
+      @include pseudo (50px,51px);
+      top: 20px;
+      left: 21px;
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       background-image: url("../img/program-card-slim.svg");
 
       @media (min-width: $tablet) {
-        @include pseudo (140px,190px);
+        @include pseudo (148px,190px);
         background-image: url("../img/program-card-slim.svg");
-        left: 488px;
-        top: 30px;
+        left: 472px;
+        top: 82px;
       }
 
       @media (min-width: $desktop) {
-        @include pseudo (100px,106px);
+        @include pseudo (100px,97px);
         background-image: url("../img/program-card-slim.svg");
-        top: 37px;
-        left: 70px;
+        top: 42px;
+        left: 53px;
       }
     }
   }
 
   &--strong {
     &::after {
-      @include pseudo (67px,55px);
-      top: 25px;
-      left: 9px;
+      @include pseudo (68px,55px);
+      top: 22px;
+      left: 12px;
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -75,15 +75,15 @@
       @media (min-width: $tablet) {
         @include pseudo (268px,112px);
         background-image: url("../img/program-card-strong.svg");
-        left: 397px;
-        top: 81px;
+        left: 412px;
+        top: 134px;
       }
 
       @media (min-width: $desktop) {
         @include pseudo (134px,56px);
         background-image: url("../img/program-card-strong.svg");
         top: 69px;
-        left: 50px;
+        left: 33px;
       }
     }
   }
@@ -92,13 +92,14 @@
 .program-card__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 29px;
-  padding-left: 65px;
+  margin-bottom: 37px;
+  padding-left: 71px;
 
   @media (min-width: $tablet) {
     font-size: 36px;
     line-height: 36px;
     padding-left: 0;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop) {
@@ -107,20 +108,9 @@
   }
 }
 
-.program-card__description {
-  margin: 0;
-  padding-bottom: 23px;
-  border-bottom: 1px solid $border-link-color;
-  margin-bottom: 15px;
-
-  @media (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 24px;
-    color: $black;
-    margin-bottom: 46px;
-    max-width: 377px;
-    padding-bottom: 0;
-    border: none;
+.program-card--strong .program-card__description {
+  @include above($tablet) {
+    max-width: 342px;
   }
 
   @include above($desktop) {
@@ -128,10 +118,36 @@
   }
 }
 
+.program-card__description {
+  margin: 0;
+  padding-bottom: 21px;
+  border-bottom: 1px solid $border-link-color;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    margin-bottom: 51px;
+    max-width: 377px;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  @include above($desktop) {
+    max-width: none;
+    margin-bottom: 26px;
+  }
+}
+
 .program-card__link {
   display: inline-block;
   position: relative;
-  padding-right: 46px;
+  padding-right: 39px;
+
+  @include above($tablet) {
+    padding-right: 49px;
+  }
 
   &::before {
     @include pseudo(24px, 10px);
@@ -157,5 +173,9 @@
     font-size: 20px;
     line-height: 30px;
     align-self: flex-start;
+  }
+
+  @include above($desktop) {
+    margin-top: auto;
   }
 }

@@ -6,37 +6,51 @@
   background-color: $gray-100;
 }
 
-.contacts-info {
+.contacts__info {
   display: flex;
-  padding-top: 22px;
+  padding-top: 28px;
   padding-bottom: 26px;
   justify-content: flex-start;
   background-color: inherit;
+
+  @include above($tablet) {
+    padding-top: 62px;
+    padding-bottom: 57px;
+    line-height: 24px;
+  }
 
   @media (min-width: $desktop) {
     position: absolute;
     background-color: white;
     width: 570px;
-    padding: 76px;
-    top: 50px;
+    padding: 63px 78px;
+    top: 92px;
     left: 110px;
-    z-index: 3;
   }
 }
 
 .contacts__wraper {
   position: relative;
+
+  @include above($tablet) {
+    padding: 0 70px;
+  }
 }
 
 .contacts__welcome {
   flex-basis: 50%;
   margin: 0;
   color: $black-100;
-  line-height: 18px;
+  line-height: 20px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 24px;
+    padding-top: 5px;
+  }
+
+  @include above($desktop) {
+    padding-top: 0;
   }
 }
 
@@ -49,10 +63,16 @@
     text-align: right;
     font-size: 16px;
     line-height: 20px;
+
+    span + span {
+      display: inline-block;
+      margin-top: 22px;
+    }
   }
 
   @media (min-width: $desktop) {
     text-align: left;
+    padding-left: 43px;
   }
 }
 

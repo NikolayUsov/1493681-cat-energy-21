@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 55px;
     padding-bottom: 21px;
   }
 }
@@ -17,7 +17,7 @@
   width: 100%;
   text-align: center;
   padding-top: 39px;
-  padding-bottom: 32px;
+  padding-bottom: 26px;
   border-bottom: 1px solid $border-link-color;
 
   &:hover {
@@ -37,7 +37,7 @@
 
 .footer-links__social-list {
   @include reset-list();
-  padding: 20px 0 21px 0;
+  padding: 20px 0 16px 0;
   border-bottom: 1px solid $border-link-color;
   display: flex;
   justify-content: center;
@@ -49,7 +49,7 @@
 }
 
 .footer-links__social-item:not(:last-child) {
-  margin-right: 28px;
+  margin-right: 37px;
 }
 
 .footer-links__copyright {
@@ -71,4 +71,14 @@
   color: $text-color;
   margin: 0;
   align-self: center;
+
+  @include above($tablet) {
+    margin-right: 24px;
+    padding-top: 6px;
+    align-self: flex-start;
+  }
+
+  @include above($desktop) {
+    padding-top: 0;
+  }
 }

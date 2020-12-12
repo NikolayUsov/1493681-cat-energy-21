@@ -40,9 +40,12 @@
 }
 
 .photo-switcher__photo {
+  margin-bottom: 34px;
+
   @include above($tablet) {
     position: relative;
     min-height: 536px;
+    margin-bottom: 7px;
   }
 
   @include above($desktop) {
@@ -61,5 +64,10 @@
 
   @include above ($tablet) {
     padding: 0 69px;
+  }
+
+  @include above ($desktop) {
+    padding: 0;
+    padding-left: 39px;
   }
 }

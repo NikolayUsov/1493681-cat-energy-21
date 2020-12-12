@@ -1,6 +1,10 @@
 .programs {
   padding-top: 22px;
-  padding-bottom: 28px;
+  padding-bottom: 29px;
+
+  @include above ($tablet) {
+    padding-top: 0;
+  }
 
   @include above($desktop) {
     padding-top: 82px;
@@ -20,6 +24,10 @@
 
 .programs__item {
   margin-bottom: 20px;
+
+  @include above($tablet) {
+    margin-bottom: 30px;
+  }
 
   &:last-child {
     margin-bottom: 0;
