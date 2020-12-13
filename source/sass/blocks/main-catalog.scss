@@ -4,6 +4,10 @@
   @include above($tablet) {
     padding-bottom: 72px;
   }
+
+  @include above($desktop) {
+    padding-bottom: 77px;
+  }
 }
 
 .main-catalog__title {

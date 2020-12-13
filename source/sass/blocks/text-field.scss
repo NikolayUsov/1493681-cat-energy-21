@@ -18,7 +18,7 @@ $border-color:$light-gray;
 }
 
 .text-field__input {
-  padding: 12px 13px;
+  padding: 12px 16px;
 
   @include form-label();
 
@@ -26,8 +26,19 @@ $border-color:$light-gray;
   border: 1px solid $border-color;
   flex-grow: 1;
 
+  @include above($tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 23px;
+  }
+
   &::placeholder {
     color: $text-color;
     opacity: 1;
+
+    @include above($tablet) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

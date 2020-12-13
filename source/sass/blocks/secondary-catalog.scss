@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 86px;
+    padding-bottom: 93px;
   }
 }
 
@@ -40,6 +40,7 @@
 
   @include above ($desktop) {
     padding-left: 0;
+    margin-bottom: 80px;
   }
 
   &::after {
