@@ -1,5 +1,9 @@
 .main-catalog {
   padding: 0;
+
+  @include above($tablet) {
+    padding-bottom: 72px;
+  }
 }
 
 .main-catalog__title {

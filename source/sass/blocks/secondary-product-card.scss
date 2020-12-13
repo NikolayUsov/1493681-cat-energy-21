@@ -8,9 +8,10 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 18px 37px;
+    padding: 23px 37px 28px;
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
     justify-content: space-between;
   }
 
@@ -72,7 +73,7 @@
 .secondary-product-card__button {
   @media (min-width: $tablet) {
     flex-basis: 100%;
-    margin-top: 27px;
+    margin-top: 22px;
   }
 
   @media (min-width: $desktop) {

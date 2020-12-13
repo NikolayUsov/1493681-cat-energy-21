@@ -4,6 +4,12 @@
   &--no-top-padding {
     padding-top: 0;
   }
+
+  &--catalog {
+    @include above($tablet) {
+      padding-top: 59px;
+    }
+  }
 }
 
 .main__title {
@@ -19,6 +25,12 @@
   &--form {
     @media (min-width: $tablet) {
       margin-bottom: 56px;
+    }
+  }
+
+  &--catalog {
+    @include above($tablet) {
+      margin-bottom: 164px;
     }
   }
 }
