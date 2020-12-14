@@ -1,4 +1,8 @@
-$header-height: 94px;
+$header-height: 115px;
+
+.promo_wrapper {
+  position: relative;
+}
 
 .promo {
   padding-top: 27px;
@@ -6,11 +10,12 @@ $header-height: 94px;
 
   @include above($tablet) {
     padding-bottom: 526px;
+    padding-top: 57px;
   }
 
   @include above($desktop) {
-    padding-top: 82px;
-    padding-bottom: 185px;
+    padding-top: 108px;
+    padding-bottom: 187px;
   }
 
   &::after {
@@ -33,7 +38,7 @@ $header-height: 94px;
 
     @include above($desktop) {
       display: block;
-      width: calc(50% - 9px);
+      width: 50%;
       left: 50vw;
       top: -$header-height;
       height: calc(100% + #{$header-height});
@@ -51,18 +56,20 @@ $header-height: 94px;
   height: 270px;
   display: flex;
   justify-content: center;
+  margin-bottom: 4px;
 
   @include above($tablet) {
     position: absolute;
     width: 709px;
     z-index: -1;
-    top: 210px;
+    top: 201px;
+    margin-bottom: 0;
   }
 
   @include above($desktop) {
     width: 552px;
-    top: 22px;
-    left: 32%;
+    top: -82px;
+    left: 558px;
   }
 
   img {
@@ -81,9 +88,15 @@ $header-height: 94px;
     text-align: left;
     font-size: 60px;
     line-height: 60px;
-    padding-left: 62px;
+    padding-left: 87px;
     padding-right: 206px;
+    margin-bottom: 42px;
     color: $black;
+  }
+
+  @include above($desktop) {
+    padding-left: 80px;
+    margin-bottom: 37px;
   }
 }
 
@@ -95,10 +108,16 @@ $header-height: 94px;
 
   @media (min-width: $tablet) {
     text-align: left;
-    padding-left: 62px;
+    padding-left: 88px;
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 50px;
     color: $black;
+  }
+
+  @include above($desktop) {
+    padding-left: 80px;
+    margin-bottom: 54px;
   }
 }
 
@@ -108,9 +127,9 @@ $header-height: 94px;
 
   @media (min-width: $tablet) {
     min-width: 245px;
-    margin-left: 62px;
+    margin-left: 81px;
     font-size: 20px;
     line-height: 20px;
-    padding: 14px 26px;
+    padding: 16px 26px;
   }
 }

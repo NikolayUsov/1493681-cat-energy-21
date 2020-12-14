@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 14px 5px;
+  padding: 13px 5px;
   padding-bottom: 0;
   width: 124px;
   border: 1px solid $gray-400;
@@ -20,7 +20,9 @@
 }
 
 .example-stats__title {
-  margin-bottom: 13px;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+  text-align: center;
 
   @include above($tablet) {
     font-size: 30px;
@@ -30,8 +32,8 @@
 }
 
 .example-stats__description {
-  margin-bottom: -15px;
-  padding: 0 11px;
+  margin-bottom: -16px;
+  padding: 0 17px;
   text-align: center;
   font-size: 12px;
   line-height: 12px;
@@ -42,9 +44,16 @@
     line-height: 14px;
     margin-bottom: -7px;
     background-color: $white;
+    padding: 0 9px;
   }
 
   @include above($desktop) {
     background-color: $gray-100;
+  }
+}
+
+.example-stats__description br {
+  @include above($tablet) {
+    display: none;
   }
 }

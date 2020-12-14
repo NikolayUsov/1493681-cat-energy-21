@@ -1,8 +1,28 @@
 .main {
-  padding-top: 27px;
+  padding-top: 25px;
 
   &--no-top-padding {
     padding-top: 0;
+  }
+
+  &--catalog {
+    @include above($tablet) {
+      padding-top: 59px;
+    }
+
+    @include above($desktop) {
+      padding-top: 70px;
+    }
+  }
+
+  &--form {
+    @include above($tablet) {
+      padding-top: 60px;
+    }
+
+    @include above($desktop) {
+      padding-top: 70px;
+    }
   }
 }
 
@@ -18,7 +38,18 @@
 
   &--form {
     @media (min-width: $tablet) {
-      margin-bottom: 56px;
+      margin-bottom: 52px;
+      padding-left: 40px;
+    }
+
+    @include above($desktop) {
+      padding-left: 0;
+    }
+  }
+
+  &--catalog {
+    @include above($tablet) {
+      margin-bottom: 164px;
     }
   }
 }
@@ -33,9 +64,11 @@
     font-size: 20px;
     line-height: 30px;
     max-width: 363px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: $desktop) {
     padding-left: 0;
+    margin-bottom: 68px;
   }
 }

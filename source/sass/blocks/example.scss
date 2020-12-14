@@ -1,17 +1,20 @@
 .example {
   background-color: $example-bg-color;
-  padding: 27px 0 25px;
+  padding: 30px 0 38px;
 
   @include above($tablet) {
-    background-image: linear-gradient(to bottom, #{$white} 61%, #{$gray} 36%);
+    padding-top: 43px;
+    background-image: linear-gradient(to bottom, #{$white} 619px, #{$gray} 619px);
     background-color: transparent;
+    padding-bottom: 68px;
   }
 
   @include above($desktop) {
-    background-image: linear-gradient(to bottom, #{$white} 0%, #{$white} 36%, transparent 36%),
+    background-image: linear-gradient(to bottom, #{$white} 0, #{$white} 191px, transparent 191px),
       linear-gradient(to right, #{$gray-100} calc(50vw + 319px), #{$gray} 50vw);
     background-color: transparent;
-    padding-bottom: 90px;
+    padding-bottom: 46px;
+    padding-top: 0;
   }
 }
 
@@ -30,11 +33,12 @@
 
 .example__title {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
 
   @include above($tablet) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 64px;
   }
 
   @include above($desktop) {
@@ -46,9 +50,15 @@
   margin: 0;
   margin-bottom: 25px;
 
+  @include above($tablet) {
+    padding-right: 10px;
+    margin-bottom: 53px;
+  }
+
   @media (min-width: $desktop) {
     max-width: 436px;
     margin-bottom: 69px;
+    padding-right: 0;
   }
 }
 
@@ -57,10 +67,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 77px;
   }
 
   @media (min-width: $desktop) {
     display: block;
+    margin-bottom: 0;
   }
 }
 
@@ -78,29 +90,33 @@
 
 .example__stats-item {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 }
 
 .example__stats-price {
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 45px;
   text-align: center;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    min-height: 60px;
+    justify-content: space-between;
     align-items: flex-end;
     font-size: 20px;
     line-height: 20px;
+    align-self: flex-start;
+    padding-top: 11px;
   }
 
   @media (min-width: $desktop) {
@@ -108,5 +124,6 @@
     align-items: stretch;
     justify-content: space-between;
     max-width: 327px;
+    min-height: none;
   }
 }
