@@ -37,9 +37,10 @@
 
 .footer-links__social-list {
   @include reset-list();
-  padding: 20px 0 16px 0;
+  padding: 24px 0 11px 0;
   border-bottom: 1px solid $border-link-color;
   display: flex;
+  align-items: baseline;
   justify-content: center;
 
   @media (min-width: $tablet) {
@@ -49,7 +50,7 @@
 }
 
 .footer-links__social-item:not(:last-child) {
-  margin-right: 37px;
+  margin-right: 34px;
 }
 
 .footer-links__copyright {
