@@ -47,5 +47,8 @@
   ],
   "engines": {
     "node": "14.15.0"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
   }
 }

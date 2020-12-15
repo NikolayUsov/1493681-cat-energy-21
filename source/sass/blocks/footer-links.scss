@@ -53,6 +53,50 @@
   margin-right: 34px;
 }
 
+.footer-links__social-link {
+  color: $gray-600;
+
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer-links__icon {
+  &--facebook {
+    width: 22px;
+    height: 22px;
+
+    @include above($tablet) {
+      width: 28px;
+      height: 33px;
+    }
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+
+    @include above($tablet) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--vkontakte {
+    width: 23px;
+    height: 16px;
+
+    @include above($tablet) {
+      width: 30px;
+      height: 22px;
+    }
+  }
+}
+
 .footer-links__copyright {
   display: flex;
   justify-content: space-between;
