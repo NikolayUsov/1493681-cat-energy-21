@@ -108,6 +108,10 @@
     padding: 0;
     border-color: transparent;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer-links__copyright-text {
@@ -126,4 +130,12 @@
   @include above($desktop) {
     padding-top: 0;
   }
+}
+
+.footer-links__copyright-picture {
+  color: $gray-600;
+}
+
+.footer-links__copyright:hover .footer-links__copyright-picture {
+  color: $basic-green;
 }
