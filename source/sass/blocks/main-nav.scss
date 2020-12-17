@@ -131,7 +131,7 @@
   &::before {
     @include above($tablet) {
       @include pseudo(100% ,2px);
-      bottom: -11px;
+      bottom: -6px;
       left: 0;
       background-color: $basic-green;
     }

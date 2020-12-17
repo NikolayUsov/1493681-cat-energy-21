@@ -1,5 +1,5 @@
 .secondary-product-card {
-  padding-top: 12px;
+  padding-top: 13px;
   padding-bottom: 16px;
   border-bottom: 1px solid $gray-400;
 
@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 23px 37px 28px;
+    padding: 25px 37px 27px;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;

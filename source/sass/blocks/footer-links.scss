@@ -7,8 +7,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 52px;
+    padding-bottom: 53px;
+  }
+
+  @include above($desktop) {
     padding-top: 55px;
-    padding-bottom: 21px;
   }
 }
 
@@ -16,7 +20,7 @@
   display: inline-block;
   width: 100%;
   text-align: center;
-  padding-top: 39px;
+  padding-top: 38px;
   padding-bottom: 26px;
   border-bottom: 1px solid $border-link-color;
 
@@ -32,12 +36,14 @@
     width: auto;
     padding: 0;
     border-color: transparent;
+    margin-right: 32px;
+    align-self: flex-end;
   }
 }
 
 .footer-links__social-list {
   @include reset-list();
-  padding: 24px 0 11px 0;
+  padding: 18px 0 19px 0;
   border-bottom: 1px solid $border-link-color;
   display: flex;
   align-items: baseline;
@@ -46,11 +52,16 @@
   @media (min-width: $tablet) {
     padding: 0;
     border-color: transparent;
+    align-items: center;
   }
 }
 
 .footer-links__social-item:not(:last-child) {
-  margin-right: 34px;
+  margin-right: 35px;
+
+  @include above($tablet) {
+    margin-right: 30px;
+  }
 }
 
 .footer-links__social-link {
@@ -101,7 +112,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 22px 0;
+  padding: 20px 0;
   text-decoration: none;
 
   @media (min-width: $tablet) {
@@ -123,12 +134,6 @@
 
   @include above($tablet) {
     margin-right: 24px;
-    padding-top: 6px;
-    align-self: flex-start;
-  }
-
-  @include above($desktop) {
-    padding-top: 0;
   }
 }
 

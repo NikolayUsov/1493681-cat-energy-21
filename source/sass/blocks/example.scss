@@ -27,7 +27,7 @@
 
 .example__content {
   @include above($desktop) {
-    padding-top: 56px;
+    padding-top: 60px;
   }
 }
 

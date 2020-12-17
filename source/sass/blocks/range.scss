@@ -41,6 +41,7 @@
   @include above($tablet) {
     height: 6px;
     margin: 0 22px;
+    padding: 2px 5px;
     background-color: $gray-400;
   }
 }

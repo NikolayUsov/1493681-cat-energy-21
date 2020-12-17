@@ -4,7 +4,7 @@ $border-color: $light-gray;
   padding-bottom: 31px;
 
   @include above($tablet) {
-    padding-bottom: 75px;
+    padding-bottom: 74px;
   }
 
   @include above($desktop) {
@@ -66,15 +66,15 @@ $border-color: $light-gray;
     margin-bottom: 53px;
 
     @include above($tablet) {
-      margin-bottom: 11px;
+      margin-bottom: 16px;
     }
   }
 
   &--user-info {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 
     @include above($tablet) {
-      margin-bottom: 70px;
+      margin-bottom: 67px;
     }
   }
 
@@ -84,7 +84,7 @@ $border-color: $light-gray;
     @media (min-width: $tablet) {
       padding-top: 35px;
       padding-bottom: 35px;
-      margin-bottom: 36px;
+      margin-bottom: 40px;
     }
 
     @media (min-width: $desktop) {
@@ -172,12 +172,12 @@ $border-color: $light-gray;
 
 .form__group--radio {
   @include above($tablet) {
-    padding: 36px 28px 30px;
+    padding: 30px 28px 23px;
     border: 1px solid #e7e7e7;
   }
 
   @include above($desktop) {
-    padding: 28px 28px 25px;
+    padding: 30px 28px 23px;
   }
 }
 
@@ -195,7 +195,11 @@ $border-color: $light-gray;
 }
 
 .form__option {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
+
+  @include above($tablet) {
+    margin-bottom: 22px;
+  }
 
   &--radio {
     margin-bottom: 24px;
@@ -212,7 +216,7 @@ $border-color: $light-gray;
 
 .form__group--cat-info .form__option {
   @include above($tablet) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
