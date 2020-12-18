@@ -6,12 +6,12 @@
     padding-top: 43px;
     background-image: linear-gradient(to bottom, #{$white} 619px, #{$gray} 619px);
     background-color: transparent;
-    padding-bottom: 68px;
+    padding-bottom: 69px;
   }
 
   @include above($desktop) {
     background-image: linear-gradient(to bottom, #{$white} 0, #{$white} 191px, transparent 191px),
-      linear-gradient(to right, #{$gray-100} calc(50vw + 319px), #{$gray} 50vw);
+      linear-gradient(to right, #{$gray-100} calc(50vw + 325px), #{$gray} 50vw);
     background-color: transparent;
     padding-bottom: 46px;
     padding-top: 0;

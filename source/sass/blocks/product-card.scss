@@ -178,9 +178,16 @@
   color: $text-color;
   font-size: 16px;
   min-height: 40px;
-  flex: 0 0 100%;
 
   @include above($tablet) {
     min-height: 40px;
+  }
+
+  &:hover {
+    background-color: $gray-800;
+  }
+
+  &:active {
+    color: rgba($text-color, 0.3);
   }
 }

@@ -111,7 +111,7 @@ $border-color: $light-gray;
   position: relative;
 
   &::before {
-    @include pseudo(100vw, 2px);
+    @include pseudo(100%, 2px);
     top: 1.2em;
     left: 0;
     background-color: $basic-green;
@@ -238,6 +238,16 @@ $border-color: $light-gray;
   min-height: 150px;
   padding: 10px 13px;
   border: 1px solid $border-color;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $gray-400;
+  }
+
+  &:focus {
+    border: 1px solid $text-color;
+    box-shadow: inset 0 0 0 1px $text-color;
+  }
 
   &::placeholder {
     color: $text-color;

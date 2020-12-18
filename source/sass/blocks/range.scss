@@ -42,7 +42,8 @@
     height: 6px;
     margin: 0 22px;
     padding: 2px 5px;
-    background-color: $gray-400;
+    background-color: $gray-700;
+    border: none;
   }
 }
 
@@ -78,7 +79,7 @@
     border: 1px solid $gray-400;
     background-color: $white;
     top: -18px;
-    left: 46%;
+    left: 49%;
     box-shadow: 0 1px 3px rgba($black, 0.16);
 
     &:hover {
