@@ -13,20 +13,20 @@ $border-color: $light-gray;
 }
 
 .form__wrapper {
-  width: 320px;
+  min-width: 320px;
   max-width: 476px;
   padding: 0 20px;
   margin: 0 auto;
 
   @media (min-width: $tablet) {
-    width: $tablet;
+    min-width: $tablet - 1px;
     max-width: $desktop;
     padding: 0 70px;
   }
 
   @media (min-width: $desktop) {
-    width: $desktop;
     max-width: $desktop;
+    min-width: initial;
     padding: 0 110px;
   }
 }
