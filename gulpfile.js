@@ -11,17 +11,21 @@ const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore  = require("gulp-svgstore");
+const svgstore = require("gulp-svgstore");
 const del = require("del");
+const gulpif = require('gulp-if');
+
+const isProd = process.argv.includes("build");
+console.log(isProd)
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
-  .pipe(imagemin([
-    imagemin.mozjpeg({progressive: true}),
-    //imagemin.optipng({optimizationLevel: 3}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("build/img"))
+    .pipe(gulpif(isProd, imagemin([
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ])))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = images;
@@ -30,8 +34,8 @@ exports.images = images;
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.createWebp = createWebp;
@@ -40,19 +44,21 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/icon-*.svg")
-  .pipe(svgstore())
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"))
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
 }
+
 exports.sprite = sprite;
 
 // html
 
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest("build"))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
 }
+
 exports.html = html;
 
 // Styles
@@ -79,11 +85,11 @@ exports.styles = styles;
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
-  .pipe(gulp.dest("build/js"))
-  .pipe(uglify())
-  .pipe(rename("scripts.min.js"))
-  .pipe(gulp.dest("build/js"))
-  .pipe(sync.stream());
+    .pipe(gulp.dest("build/js"))
+    .pipe(uglify())
+    .pipe(rename("scripts.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
@@ -93,12 +99,11 @@ exports.scripts = scripts;
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/img/**/*.{jpg,png,svg}"
   ],
-  {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"))
+    {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"))
 }
 
 exports.copy = copy;
@@ -131,11 +136,12 @@ exports.server = server;
 
 const build = gulp.series(
   clean,
-  gulp.parallel (
+  gulp.parallel(
     styles,
     html,
     sprite,
-    //createWebp,
+    images,
+    createWebp,
     copy,
     scripts
   )

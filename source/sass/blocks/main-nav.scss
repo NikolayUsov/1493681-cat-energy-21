@@ -46,7 +46,9 @@
 
 .main-nav--nojs .main-nav__list,
 .main-nav--open .main-nav__list {
-  display: block;
+  @media (max-width: $tablet - 1px) {
+    display: block;
+  }
 }
 
 .main-nav__item {
@@ -59,7 +61,7 @@
   position: relative;
 
   &::after {
-    @include pseudo(100vw, 1px);
+    @include pseudo(calc(100% + 40px), 1px);
     top: 0;
     left: -20px;
     background-color: $gray-300;

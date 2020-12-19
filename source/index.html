@@ -45,9 +45,12 @@
         <p class="promo__tagline text text--small text--uppercase">Занялся собой? Займись котом!</p>
         <div class="promo__picture">
           <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/promo-picture-desktop.webp 1x, img/promo-picture-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/promo-picture-tablet.webp 1x, img/promo-picture-tablet@2x.webp 2x">
+            <source media="(max-width: 767px)" type="image/webp" srcset="img/promo-picture-mobile.webp 1x, img/promo-picture-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/promo-picture-desktop.png 1x, img/promo-picture-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/promo-picture-tablet.jpg 1x, img/promo-picture-tablet@2x.jpg 2x">
-            <img src="img/promo-picture-mobile.png" srcset="img/promo-picture-mobile@2x.png 2x" width="280px" height="270" alt="Промо картинка одного из нашего товара">
+            <img src="img/promo-picture-mobile.png" srcset="img/promo-picture-mobile@2x.png 2x" width="280" height="270" alt="Промо картинка одного из нашего товара">
           </picture>
         </div>
         <a href="form.html" class="button  promo__button">подобрать программу</a>
@@ -116,12 +119,16 @@
           <div class="photo-switcher__photo">
             <div class="photo-switcher__before photo-switcher__active">
               <picture>
+                <source media="(max-width:767px)" type="image/webp" srcset="img/cat-fat-mobile.webp 1x, img/cat-fat-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/cat-fat-tablet-desktop.webp 1x, img/cat-fat-tablet-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-fat-tablet-desktop.png 1x, img/cat-fat-tablet-desktop@2x.png 2x">
                 <img src="img/cat-fat-mobile.png" srcset="img/cat-fat-mobile@2x.png 2x"  width="311" height="282" alt="Фотографи кота до старта программы">
               </picture>
             </div>
             <div class="photo-switcher__after">
               <picture>
+                <source media="(max-width:767px)" type="image/webp" srcset="img/cat-skinny-mobile@2x.webp 1x, img/cat-skinny-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/cat-skinny-tablet-desktop.webp 1x, img/cat-skinny-tablet-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-skinny-tablet-desktop.png 1x, img/cat-skinny-tablet-desktop@2x.png 2x">
                 <img src="img/cat-skinny-mobile.png" srcset="img/cat-skinny-mobile@2x.png 2x" width="251" height="240" alt="Фотографи кота после старта программы">
               </picture>
