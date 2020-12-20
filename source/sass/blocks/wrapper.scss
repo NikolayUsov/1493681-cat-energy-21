@@ -6,12 +6,12 @@
 
   @media (min-width: $tablet) {
     min-width: $tablet;
-    max-width: $desktop - 1px;
+    max-width: 922px;
     padding: 0 30px;
   }
 
   @media (min-width: $desktop) {
-    width: $desktop;
+    max-width: $desktop;
     padding: 0 110px;
   }
 }

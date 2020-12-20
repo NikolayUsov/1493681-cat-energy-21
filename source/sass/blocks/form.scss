@@ -20,7 +20,7 @@ $border-color: $light-gray;
 
   @media (min-width: $tablet) {
     min-width: $tablet - 1px;
-    max-width: $desktop;
+    max-width: 920px;
     padding: 0 70px;
   }
 
