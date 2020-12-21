@@ -37,6 +37,8 @@
   }
 
   &--form {
+    margin-bottom: 38px;
+
     @media (min-width: $tablet) {
       margin-bottom: 52px;
       padding-left: 40px;
@@ -56,7 +58,7 @@
 
 .main__description {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
   line-height: 18px;
 
   @media (min-width: $tablet) {

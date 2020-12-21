@@ -8,7 +8,7 @@ $border-color: $light-gray;
   }
 
   @include above($desktop) {
-    padding-bottom: 86px;
+    padding-bottom: 82px;
   }
 }
 
@@ -65,7 +65,7 @@ $border-color: $light-gray;
   }
 
   &--cat-info {
-    margin-bottom: 53px;
+    margin-bottom: 16px;
 
     @include above($tablet) {
       margin-bottom: 16px;
@@ -76,17 +76,26 @@ $border-color: $light-gray;
     margin-bottom: 27px;
 
     @include above($tablet) {
-      margin-bottom: 67px;
+      margin-bottom: 63px;
+    }
+
+    @include above($desktop) {
+      margin-bottom: 68px;
     }
   }
 
   &--radio-group {
-    margin-bottom: 46px;
+    margin-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 22px;
+    border-top: 1px solid $gray-200;
+    border-bottom: 1px solid $gray-200;
 
     @media (min-width: $tablet) {
       padding-top: 35px;
       padding-bottom: 35px;
       margin-bottom: 40px;
+      border: none;
     }
 
     @media (min-width: $desktop) {
@@ -100,11 +109,11 @@ $border-color: $light-gray;
     margin-bottom: 37px;
 
     @include above($tablet) {
-      margin-bottom: 34px;
+      margin-bottom: 42px;
     }
 
     @include above($desktop) {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
   }
 }
@@ -128,7 +137,7 @@ $border-color: $light-gray;
   line-height: 26px;
   color: $black;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   position: relative;
   display: inline-block;
   background-color: $white;
@@ -137,7 +146,7 @@ $border-color: $light-gray;
   @media (min-width: $tablet) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 76px;
+    margin-bottom: 80px;
     padding-right: 40px;
   }
 
@@ -158,6 +167,10 @@ $border-color: $light-gray;
 
     @media (min-width: $tablet) {
       margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 55px;
     }
   }
 }
@@ -197,18 +210,18 @@ $border-color: $light-gray;
 }
 
 .form__option {
-  margin-bottom: 17px;
+  margin-bottom: 9px;
 
   @include above($tablet) {
     margin-bottom: 22px;
   }
 
   &--radio {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   &--checkbox {
-    margin-bottom: 23px;
+    margin-bottom: 10px;
   }
 
   &:last-child {
@@ -217,6 +230,8 @@ $border-color: $light-gray;
 }
 
 .form__group--cat-info .form__option {
+  margin-bottom: 8px;
+
   @include above($tablet) {
     margin-bottom: 22px;
   }
