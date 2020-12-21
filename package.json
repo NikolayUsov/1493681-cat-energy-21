@@ -10,6 +10,7 @@
     "gulp": "4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
@@ -28,7 +29,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "sprite": "gulp sprite",
+    "build": "gulp build",
     "start": "gulp"
   },
   "browserslist": [
@@ -46,5 +48,8 @@
   ],
   "engines": {
     "node": "14.15.0"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
   }
 }

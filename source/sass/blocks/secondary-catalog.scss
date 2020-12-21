@@ -11,19 +11,19 @@
   padding-bottom: 35px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 73px;
+    padding-bottom: 74px;
     padding-top: 0;
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 93px;
+    padding-bottom: 85px;
   }
 }
 
 .secondary-catalog__title {
   display: inline-block;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   padding-right: 24px;
   position: relative;
 
@@ -34,7 +34,7 @@
     position: relative;
     padding-left: 37px;
     padding-right: 37px;
-    margin-bottom: 86px;
+    margin-bottom: 80px;
     background-color: $white;
   }
 
@@ -66,7 +66,7 @@
 
 .secondary-catalog__list {
   @include reset-list();
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 
   @include above($tablet) {
     margin-bottom: 69px;

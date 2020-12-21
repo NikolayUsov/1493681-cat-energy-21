@@ -4,11 +4,11 @@ $border-color: $light-gray;
   padding-bottom: 31px;
 
   @include above($tablet) {
-    padding-bottom: 75px;
+    padding-bottom: 74px;
   }
 
   @include above($desktop) {
-    padding-bottom: 86px;
+    padding-bottom: 82px;
   }
 }
 
@@ -19,12 +19,14 @@ $border-color: $light-gray;
   margin: 0 auto;
 
   @media (min-width: $tablet) {
-    max-width: $desktop;
+    min-width: $tablet - 1px;
+    max-width: 920px;
     padding: 0 70px;
   }
 
   @media (min-width: $desktop) {
     max-width: $desktop;
+    min-width: initial;
     padding: 0 110px;
   }
 }
@@ -63,28 +65,37 @@ $border-color: $light-gray;
   }
 
   &--cat-info {
-    margin-bottom: 53px;
+    margin-bottom: 16px;
 
     @include above($tablet) {
-      margin-bottom: 11px;
+      margin-bottom: 16px;
     }
   }
 
   &--user-info {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 
     @include above($tablet) {
-      margin-bottom: 70px;
+      margin-bottom: 63px;
+    }
+
+    @include above($desktop) {
+      margin-bottom: 68px;
     }
   }
 
   &--radio-group {
-    margin-bottom: 46px;
+    margin-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 22px;
+    border-top: 1px solid $gray-200;
+    border-bottom: 1px solid $gray-200;
 
     @media (min-width: $tablet) {
       padding-top: 35px;
       padding-bottom: 35px;
-      margin-bottom: 36px;
+      margin-bottom: 40px;
+      border: none;
     }
 
     @media (min-width: $desktop) {
@@ -98,11 +109,11 @@ $border-color: $light-gray;
     margin-bottom: 37px;
 
     @include above($tablet) {
-      margin-bottom: 34px;
+      margin-bottom: 42px;
     }
 
     @include above($desktop) {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
   }
 }
@@ -111,7 +122,7 @@ $border-color: $light-gray;
   position: relative;
 
   &::before {
-    @include pseudo(100vw, 2px);
+    @include pseudo(100%, 2px);
     top: 1.2em;
     left: 0;
     background-color: $basic-green;
@@ -126,7 +137,7 @@ $border-color: $light-gray;
   line-height: 26px;
   color: $black;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   position: relative;
   display: inline-block;
   background-color: $white;
@@ -135,7 +146,7 @@ $border-color: $light-gray;
   @media (min-width: $tablet) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 76px;
+    margin-bottom: 80px;
     padding-right: 40px;
   }
 
@@ -157,6 +168,10 @@ $border-color: $light-gray;
     @media (min-width: $tablet) {
       margin-bottom: 60px;
     }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 55px;
+    }
   }
 }
 
@@ -172,12 +187,12 @@ $border-color: $light-gray;
 
 .form__group--radio {
   @include above($tablet) {
-    padding: 36px 28px 30px;
+    padding: 30px 28px 23px;
     border: 1px solid #e7e7e7;
   }
 
   @include above($desktop) {
-    padding: 28px 28px 25px;
+    padding: 30px 28px 23px;
   }
 }
 
@@ -195,14 +210,18 @@ $border-color: $light-gray;
 }
 
 .form__option {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
+
+  @include above($tablet) {
+    margin-bottom: 22px;
+  }
 
   &--radio {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   &--checkbox {
-    margin-bottom: 23px;
+    margin-bottom: 10px;
   }
 
   &:last-child {
@@ -211,8 +230,10 @@ $border-color: $light-gray;
 }
 
 .form__group--cat-info .form__option {
+  margin-bottom: 8px;
+
   @include above($tablet) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
@@ -234,6 +255,16 @@ $border-color: $light-gray;
   min-height: 150px;
   padding: 10px 13px;
   border: 1px solid $border-color;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $gray-400;
+  }
+
+  &:focus {
+    border: 1px solid $text-color;
+    box-shadow: inset 0 0 0 1px $text-color;
+  }
 
   &::placeholder {
     color: $text-color;

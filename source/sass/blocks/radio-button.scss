@@ -1,6 +1,3 @@
-.radio-button__input {
-  display: none;
-}
 
 .radio-button__label {
   @include form-label();
@@ -47,6 +44,10 @@
     height: 17px;
     left: 12px;
   }
+}
+
+.radio-button__input:focus + .radio-button__label::before {
+  border: 1px solid $gray-400;
 }
 
 .radio-button__input:disabled + label {

@@ -4,6 +4,7 @@ $border-color:$light-gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .text-field__label {
@@ -14,17 +15,38 @@ $border-color:$light-gray;
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 20px;
   }
 }
 
 .text-field__input {
   padding: 12px 16px;
+  border: 1px solid $border-color;
+  cursor: pointer;
+  height: 50px;
 
   @include form-label();
-
   color: $text-color;
-  border: 1px solid $border-color;
   flex-grow: 1;
+
+  &:hover {
+    border: 1px solid $gray-400;
+  }
+
+  &:focus {
+    border: 1px solid $text-color;
+    box-shadow: inset 0 0 0 1px $text-color;
+  }
+
+  &--error {
+    border: 1px solid $error-color;
+    box-shadow: inset 0 0 0 1px $error-color;
+
+    &:hover {
+      border: 1px solid $error-color;
+      box-shadow: inset 0 0 0 1px $error-color;
+    }
+  }
 
   @include above($tablet) {
     font-size: 20px;
@@ -41,4 +63,23 @@ $border-color:$light-gray;
       line-height: 30px;
     }
   }
+}
+
+.text-field__icon {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: $black-200;
+}
+
+.text-field__input--error + .text-field__icon {
+  color: $error-color;
+}
+
+.text-field__input:focus + .text-field__icon {
+  color: $basic-green;
 }

@@ -45,11 +45,11 @@
   @include above($tablet) {
     position: relative;
     min-height: 536px;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
   }
 
   @include above($desktop) {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
 }
 
@@ -60,7 +60,7 @@
 }
 
 .photo-switcher__control {
-  padding: 0 45px;
+  padding: 0 40px;
 
   @include above ($tablet) {
     padding: 0 69px;

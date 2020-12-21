@@ -1,13 +1,13 @@
 .programs {
   padding-top: 22px;
-  padding-bottom: 29px;
+  padding-bottom: 30px;
 
   @include above ($tablet) {
     padding-top: 0;
   }
 
   @include above($desktop) {
-    padding-top: 82px;
+    padding-top: 81px;
     padding-bottom: 71px;
   }
 }

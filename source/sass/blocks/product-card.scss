@@ -3,6 +3,21 @@
   flex-wrap: wrap;
   padding-top: 22px;
   min-height: 184px;
+  position: relative;
+
+  &::before {
+    width: calc(100% + 40px);
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: $gray-800;
+    top: 0;
+    left: -20px;
+
+    @include above($tablet) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet) {
     padding: 0 38px 39px 38px;
@@ -102,7 +117,7 @@
 .product-card--show-more {
   display: flex;
   flex-direction: column;
-  padding-top: 83px;
+  padding-top: 80px;
   text-align: center;
   order: 1;
 
@@ -178,9 +193,16 @@
   color: $text-color;
   font-size: 16px;
   min-height: 40px;
-  flex: 0 0 100%;
 
   @include above($tablet) {
     min-height: 40px;
+  }
+
+  &:hover {
+    background-color: $gray-800;
+  }
+
+  &:active {
+    color: rgba($text-color, 0.3);
   }
 }
