@@ -46,7 +46,6 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 24px;
-    padding-top: 5px;
   }
 
   @include above($desktop) {

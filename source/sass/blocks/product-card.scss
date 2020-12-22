@@ -6,13 +6,8 @@
   position: relative;
 
   &::before {
-    width: calc(100% + 40px);
-    position: absolute;
-    content: "";
-    height: 1px;
-    background-color: $gray-800;
+    @include line-pseudo-100vw($gray-800);
     top: 0;
-    left: -20px;
 
     @include above($tablet) {
       display: none;
@@ -120,6 +115,15 @@
   padding-top: 80px;
   text-align: center;
   order: 1;
+
+  &::after {
+    @include line-pseudo-100vw($gray-800);
+    bottom: -24px;
+
+    @include above($tablet) {
+      display: none;
+    }
+  }
 
   @include above($tablet) {
     background-color: $white;

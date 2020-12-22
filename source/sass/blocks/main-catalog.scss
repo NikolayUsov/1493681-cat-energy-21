@@ -1,8 +1,10 @@
 .main-catalog {
   padding: 0;
+  overflow-x: hidden;
 
   @include above($tablet) {
     padding-bottom: 72px;
+    overflow: initial;
   }
 
   @include above($desktop) {

@@ -36,3 +36,15 @@
     @content;
   }
 }
+
+@mixin line-pseudo-100vw($color) {
+  position: absolute;
+  content: "";
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  height: 1px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: $color;
+}
