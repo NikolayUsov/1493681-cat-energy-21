@@ -16,7 +16,6 @@ const del = require("del");
 const gulpif = require('gulp-if');
 
 const isProd = process.argv.includes("build");
-console.log(isProd)
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")

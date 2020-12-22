@@ -1,10 +1,10 @@
 $border-color: $light-gray;
 
 .form {
-  padding-bottom: 31px;
+  padding-bottom: 30px;
 
   @include above($tablet) {
-    padding-bottom: 74px;
+    padding-bottom: 75px;
   }
 
   @include above($desktop) {
@@ -31,7 +31,7 @@ $border-color: $light-gray;
   }
 }
 
-.form__inner--wrapper {
+.form__double-column--wrapper {
   @media (min-width: $desktop) {
     max-width: $desktop;
     padding: 0 110px;
@@ -39,14 +39,14 @@ $border-color: $light-gray;
   }
 }
 
-.form__inner--wrapper .form__wrapper {
+.form__double-column--wrapper .form__wrapper {
   @media (min-width: $desktop) {
     max-width: none;
     padding: 0;
   }
 }
 
-.form__inner--double-column {
+.form__double-column {
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -65,7 +65,7 @@ $border-color: $light-gray;
   }
 
   &--cat-info {
-    margin-bottom: 16px;
+    margin-bottom: 11px;
 
     @include above($tablet) {
       margin-bottom: 16px;
@@ -73,7 +73,7 @@ $border-color: $light-gray;
   }
 
   &--user-info {
-    margin-bottom: 27px;
+    margin-bottom: 24px;
 
     @include above($tablet) {
       margin-bottom: 63px;
@@ -92,8 +92,8 @@ $border-color: $light-gray;
     border-bottom: 1px solid $gray-200;
 
     @media (min-width: $tablet) {
-      padding-top: 35px;
-      padding-bottom: 35px;
+      padding-top: 38px;
+      padding-bottom: 40px;
       margin-bottom: 40px;
       border: none;
     }
@@ -137,7 +137,7 @@ $border-color: $light-gray;
   line-height: 26px;
   color: $black;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 39px;
   position: relative;
   display: inline-block;
   background-color: $white;
@@ -162,11 +162,23 @@ $border-color: $light-gray;
     }
   }
 
-  &--checkbox {
-    margin-bottom: 39px;
+  &--user-info {
+    margin-bottom: 32px;
 
     @media (min-width: $tablet) {
-      margin-bottom: 60px;
+      margin-bottom: 75px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 76px;
+    }
+  }
+
+  &--checkbox {
+    margin-bottom: 33px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 55px;
     }
 
     @media (min-width: $desktop) {
@@ -210,10 +222,10 @@ $border-color: $light-gray;
 }
 
 .form__option {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 
   @include above($tablet) {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   &--radio {
@@ -221,7 +233,7 @@ $border-color: $light-gray;
   }
 
   &--checkbox {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   &:last-child {
@@ -230,14 +242,14 @@ $border-color: $light-gray;
 }
 
 .form__group--cat-info .form__option {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 
   @include above($tablet) {
-    margin-bottom: 22px;
+    margin-bottom: 19px;
   }
 }
 
-.form__inner--double-column > .form__option {
+.form__double-column > .form__option {
   @media (min-width: $desktop) {
     margin-bottom: 0;
   }
