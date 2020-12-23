@@ -47,7 +47,7 @@
 }
 
 .radio-button__input:focus + .radio-button__label::before {
-  border: 1px solid $gray-400;
+  border: 1px solid $basic-green;
 }
 
 .radio-button__input:disabled + label {

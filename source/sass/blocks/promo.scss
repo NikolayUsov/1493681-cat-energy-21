@@ -1,6 +1,6 @@
 $header-height: 120px;
 
-.promo_wrapper {
+.promo__wrapper {
   position: relative;
 }
 
@@ -23,6 +23,7 @@ $header-height: 120px;
     top: 0;
     left: 0;
     z-index: -2;
+    background-color: $basic-green;
     background-image: url("../img/promo-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,6 +98,7 @@ $header-height: 120px;
   @include above($desktop) {
     padding-left: 80px;
     margin-bottom: 40px;
+    padding-right: 50%;
   }
 }
 
@@ -118,6 +120,7 @@ $header-height: 120px;
   @include above($desktop) {
     padding-left: 80px;
     margin-bottom: 54px;
+    padding-right: 50%;
   }
 }
 

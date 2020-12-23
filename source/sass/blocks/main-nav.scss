@@ -129,9 +129,13 @@
   &::before {
     @include above($tablet) {
       @include pseudo(100% ,2px);
-      bottom: -6px;
+      bottom: -11px;
       left: 0;
       background-color: $basic-green;
+    }
+
+    @include above($desktop) {
+      bottom: -6px;
     }
   }
 }
@@ -141,16 +145,6 @@
     @include above($desktop) {
       background-color: $white;
     }
-  }
-}
-
-.main-nav__text-logo {
-  display: inline-block;
-  width: 101px;
-  height: 18px;
-
-  @media (min-width: $tablet) {
-    display: none;
   }
 }
 

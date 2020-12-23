@@ -106,7 +106,7 @@ $border-color: $light-gray;
   }
 
   &--checkbox {
-    margin-bottom: 37px;
+    margin-bottom: 35px;
 
     @include above($tablet) {
       margin-bottom: 42px;
@@ -123,9 +123,13 @@ $border-color: $light-gray;
 
   &::before {
     @include pseudo(100%, 2px);
-    top: 24px;
+    top: 17px;
     left: 0;
     background-color: $basic-green;
+
+    @include above($tablet) {
+      top: 24px;
+    }
   }
 }
 
@@ -163,7 +167,7 @@ $border-color: $light-gray;
   }
 
   &--user-info {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
 
     @media (min-width: $tablet) {
       margin-bottom: 75px;
@@ -222,7 +226,7 @@ $border-color: $light-gray;
 }
 
 .form__option {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 
   @include above($tablet) {
     margin-bottom: 20px;
