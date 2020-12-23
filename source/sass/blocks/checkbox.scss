@@ -25,6 +25,7 @@
     margin-right: 16px;
     display: block;
     flex-shrink: 0;
+    align-self: flex-start;
 
     @include above($tablet) {
       width: 40px;

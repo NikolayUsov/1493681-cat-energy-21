@@ -55,6 +55,7 @@
   @media (min-width: $desktop) {
     min-width: 285px;
     margin-right: 39px;
+    margin-left: 15px;
     justify-content: flex-start;
   }
 }
@@ -66,6 +67,7 @@
 
   @media (min-width: $desktop) {
     margin-right: auto;
+    padding-right: 10px;
   }
 }
 

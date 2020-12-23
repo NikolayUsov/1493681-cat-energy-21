@@ -24,6 +24,7 @@ $border-color:$light-gray;
   border: 1px solid $border-color;
   cursor: pointer;
   height: 47px;
+  padding-right: 35px;
 
   @include form-label();
   color: $text-color;
@@ -54,6 +55,7 @@ $border-color:$light-gray;
     line-height: 30px;
     padding: 10px 18px;
     height: 52px;
+    padding-right: 45px;
   }
 
   &::placeholder {
