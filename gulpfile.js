@@ -18,10 +18,10 @@ const gulpif = require('gulp-if');
 const isProd = process.argv.includes("build");
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(gulpif(isProd, imagemin([
       imagemin.mozjpeg({ progressive: true }),
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({ optimizationLevel: 3}),
       imagemin.svgo()
     ])))
     .pipe(gulp.dest("build/img"))
